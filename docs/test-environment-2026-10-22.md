@@ -57,3 +57,9 @@ Son önizleme üzerindeki ilk kurulum formunda kullanıcı test admin adını ve
 
 ## Araç sonuçları
 İlk salt okuma SQL isteğinin otomatik onay incelemesi zaman aşımına uğradı. Durum yeniden okununca DB hâlâ boştu; tek yeniden deneme başarılı oldu. İlk deploy isteğinde target=preview API tarafından 400 ile reddedildi; API'nin standart preview değeri staging ile düzeltildi. Şema ve son deployment yukarıdaki gerçek sonuçlarla doğrulandı.
+
+## Sonraki düzeltme — preview origin
+
+Kullanıcı ilk admini oluşturdu; auth_records=2 doğrulandı. İlk başlatma hata verdi ve crawl_runs=0 kaldı. Kaynaktaki yalnız production origin'i kabul eden kontrol gerçek Node regresyonunda hata verdi; tam platform preview host'larını kabul eden düzeltme sonrası 5/5 geçti. Source PR #176 CI 39825844316: 762/762 MCP, dashboard derlemesi ve servis kontrolleri geçti. Squash yalnız özellik dalına; source main/production değişmedi.
+
+Güncel head: 1e70f0db8198fff1493e39d197fc1b9981250f33. Yeni deployment dpl_Hy62js3FVuckFjsx9s5jxRoDKqsS READY. Sabit dal adresi: https://buzsu-growth-os-git-claude-site-i-9a5c6f-bulent-kavals-projects.vercel.app/giris?next=%2Fsite-icerik . Kullanıcı aynı test hesabını kullanır; yeni admin oluşturmaz. Immutable eski URL güncellenmez. Yalnız UI login sayfası yeni alias üzerinde görüldü; oturumlu tarama tekrar testi henüz yapılmadı. Bu kayıt T-007'nin tamamlandığı veya taramanın başarılı olduğu iddiası değildir.
