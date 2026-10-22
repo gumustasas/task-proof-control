@@ -1,6 +1,6 @@
 # Claude'a yapıştırılacak devam mesajı
 
-https://github.com/gumustasas/task-proof-control reposundaki TaskProof projesini kaldığı yerden devam ettir. Önce feat/bootstrap dalını seç; main ilk PR birleştirilene kadar yalnız başlangıç README'sini içerir. Bu klasör bağımsız projenin tamamıdır. Önce START_HERE.md, AGENTS.md, CLAUDE.md, STATE.md, TASKS.md, ARCHITECTURE.md ve DECISIONS.md dosyalarını oku. Git durumunu ve son commit'leri kontrol et. Ardından npm.cmd test çalıştır.
+https://github.com/gumustasas/task-proof-control reposundaki TaskProof projesini kaldığı yerden devam ettir. PR #1 birleştirilmişse main, hâlâ açıksa feat/bootstrap dalını seç. Bu klasör bağımsız projenin tamamıdır. Önce START_HERE.md, AGENTS.md, CLAUDE.md, STATE.md, TASKS.md, ARCHITECTURE.md ve DECISIONS.md dosyalarını oku. Git durumunu ve son commit'leri kontrol et. Ardından npm.cmd test çalıştır. Bu belge yalnız gelecekte gerekebilecek devir içindir; güncel geliştirmeyi Codex sürdürüyor.
 
 Amaç: görev kabul şartlarını aynı commit'e ait gerçek kanıtlarla eşleştiren, doğrulanmış/başarısız/kanıt yetersiz/eski sonuçlarını gösteren bağımsız panel.
 

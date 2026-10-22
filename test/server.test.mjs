@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { request } from 'node:http';
 import { makeServer } from '../src/server.mjs';
 test('loopback üzerinden HTTP kontrolü', async (t) => {
   const server = makeServer();
@@ -20,7 +21,14 @@ test('loopback üzerinden HTTP kontrolü', async (t) => {
       assert.equal((await fetch(base + path)).status, 404);
     }
     assert.equal((await fetch(base + '/api/snapshot', {method:'POST'})).status, 405);
-    assert.equal((await fetch(base, {headers:{Host:'attacker.example'}})).status, 403);
+    // Node fetch can normalize/ignore Host; raw HTTP must carry the hostile host.
+    const hostileHostStatus = await new Promise((resolve, reject) => {
+      const req = request(base, {headers:{Host:'attacker.example'}}, (res) => {
+        res.resume(); res.on('end', () => resolve(res.statusCode));
+      });
+      req.on('error', reject); req.end();
+    });
+    assert.equal(hostileHostStatus, 403);
   } finally { await new Promise((resolve) => server.close(resolve)); }
 });
 

@@ -2,7 +2,7 @@
 
 Tarih: 22 Ekim 2026, Europe/Istanbul.
 Proje: TaskProof (çalışma adı), v0.1.0.
-Dal: feat/bootstrap.
+Dal seçimi: PR #1 açıkken feat/bootstrap; birleştirme sonrasında main.
 Kullanıcının güncel talebi: geliştirmeyi Codex sürdürecek; dosyaları yükle, PR aç, kontrol et ve başarılı kontrollerden sonra main'e merge et. Başka asistana devir şu anda istenmiyor.
 Yetkili uzak repo: https://github.com/gumustasas/task-proof-control (kullanıcı tarafından açıldı; public).
 
@@ -18,7 +18,7 @@ Yetkili uzak repo: https://github.com/gumustasas/task-proof-control (kullanıcı
 Gerçek örnek: 0 doğrulandı, 0 başarısız, 5 kanıt yetersiz, 0 eski. Bu sonuç dış PR'ın bozuk olduğunu göstermez; doğrudan davranış kanıtı toplanmadığını gösterir.
 
 ## Çevrimiçi durum
-Kullanıcının açtığı gumustasas/task-proof-control reposu GitHub bağlantısıyla doğrulandı. Main yalnız başlangıç README'sini içeriyordu; başlangıç commit'i cc543c5f75d0b59726953cf932750db3a47072a7. İlk kod ve belgeler feat/bootstrap dalına aktarılmak üzere hazırlandı. Aktarımın gerçekleştiğini bu dosyayı uzak daldan okuyarak ve PR/head SHA ile doğrula. CLI auth geçersiz; GitHub bağlantısı üzerinden okuma/yazma yolu kullanılacak.
+Kullanıcının açtığı gumustasas/task-proof-control reposu GitHub bağlantısıyla doğrulandı. Başlangıçta main yalnız README içeriyordu; başlangıç commit'i cc543c5f75d0b59726953cf932750db3a47072a7. Kod ve belgeler feat/bootstrap dalına yüklendi; PR #1 açıldı: https://github.com/gumustasas/task-proof-control/pull/1 . İlk yükleme commit'i 29b15abb8fd2f7657513d5f7b435b4b758366872. Birleştirme durumu ve güncel head SHA için GitHub'ı kontrol et. CLI auth geçersiz; aktarım GitHub bağlantısı üzerinden yapıldı.
 İnternet paneli/deployment ve çalışma zamanında canlı GitHub adapteri yok. Kaynak PR'ları sınayan otomatik runner yok. Bu projenin kendi motor/HTTP testleri için GitHub Actions workflow'u eklendi; PR kontrol sonucu GitHub'dan doğrulanmalı. CI'da loopback testinin atlanmasına izin verilmez. Ücretli model yok. Repo görünürlüğü veya uygulama erişim ayarları değiştirilmedi.
 
 ## Sıradaki iş
