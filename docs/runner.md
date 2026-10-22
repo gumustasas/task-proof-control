@@ -2,6 +2,8 @@
 
 Runner panelden bağımsız CLI'dır. Güvenilir operatör tarafından yönetilen, geçici Linux Docker host gerektirir. Yerel makinede kaynak kod çalıştırma fallback'i yoktur. İlk prototip yalnız Node standart kütüphaneleriyle çalışan açıkça seçilmiş `*.test.mjs/js/cjs` dosyalarını destekler. npm install, lifecycle script, repo Dockerfile, keyfi shell ve online bağımlılık indirme yoktur.
 
+Bu kısıt runner'ın host üzerinde başlattığı komutlarla ilgilidir. Test kodu container içinde subprocess açabilir; bu süreçler aynı container limitlerine tabidir. Başarı için container state gerçekten `exited` olmalı ve başarılı exit yanında attach istemcisi de başarılı bitmelidir. Başlatılamayan `created` container'ın varsayılan exitCode=0 değeri başarı kabul edilmez.
+
 ```sh
 docker pull node:22-bookworm-slim
 node src/runner-cli.mjs /trusted/checkout FULL_40_CHAR_COMMIT_SHA test/engine.test.mjs > execution.json

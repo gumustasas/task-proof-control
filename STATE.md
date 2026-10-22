@@ -15,6 +15,8 @@ T-007 ön koşul engeli: Growth OS #175 preview URL/deployment SHA, ayrı test D
 T-008 ön ölçüm hazır: üç seçilmiş TaskProof UI davranışı verified, beş Growth OS kriteri insufficient. CI loglarından operatör aktarımı, kimlik/byte attestation yok. İnsan inceleme süresi ve zaman kazancı ölçülmedi; tam fayda deneyi açık. docs/pilot.md ve pilot-results.json sınırları içerir.
 Hazırlık/ön ölçüm PR #6 kapsamında kaydedildi. Head 5f60626fa4a5d32a2811aae57d347da2d372c238 için run 39807275638 / job 119923737530: 42/42, yedi Chromium, Docker, canlı GitHub ve pilot beklentileri geçti; loglar okundu. Bu belge kontrol sonucunu kaydeder; daha sonraki head ve squash SHA için GitHub yetkilidir. PR #6 sonrasında bağımlılığı hazır yeni kod görevi yok: T-007 dış ön koşulları çözülünce bu plandan devam et. Kaynak projeye yazmadan önce kapsam ve test ortamı belirlenmeli.
 
+PR #6 son kod incelemesi: runner, hiç başlatılmayan created container varsayılan exitCode=0 değerini başarı kabul etmeyecek şekilde düzeltildi. Gerçek exited state ve başarılı attach gerekir; regresyon testi eklendi. Yerelde 42 başarı ve bir EACCES skip; son hosted head için 43 test beklenir. Sonuç ve squash SHA GitHub üzerinde kontrol edilir.
+
 ## Çalıştırma
 Node.js >=22; `npm.cmd test`, `npm.cmd start`; panel http://127.0.0.1:4317.
 Runtime bağımlılıksız. Playwright 1.56.1 yalnız CI/geliştirme test aracı. Vercel, Neon, ücretli model ve internet deployment yok. Opsiyonel GitHub token yalnız ortam değişkeninde; public repo anahtarsız okunabilir.

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { boundedProcess, validateTestPaths, parseTree, containerArgs } from '../src/runner.mjs';
+import { boundedProcess, validateTestPaths, parseTree, containerArgs, completedContainerExit } from '../src/runner.mjs';
 
 test('runner paths reject flags, shell text, traversal and globs', () => {
   validateTestPaths(['test/core.test.mjs']);
@@ -26,4 +26,11 @@ test('runner fixed container policy contains no host socket or inherited token',
   assert.equal(args.filter(value => value.startsWith('--mount')).length, 1);
   assert.ok(!args.join(' ').includes('docker.sock')); assert.ok(!args.join(' ').includes('TOKEN'));
   assert.throws(() => containerArgs('/tmp/stage,evil', 'node:latest', ['test/a.test.mjs'], 'fixture'));
+});
+
+test('a never-started container or failed attach cannot look successful', () => {
+  assert.throws(() => completedContainerExit({Status:'created', Running:false, ExitCode:0, Error:''}, 1));
+  assert.throws(() => completedContainerExit({Status:'exited', Running:false, ExitCode:0, Error:''}, 125));
+  assert.equal(completedContainerExit({Status:'exited', Running:false, ExitCode:0, Error:''}, 0), 0);
+  assert.equal(completedContainerExit({Status:'exited', Running:false, ExitCode:1, Error:''}, 1), 1);
 });

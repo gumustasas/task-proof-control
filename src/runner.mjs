@@ -69,6 +69,13 @@ export function containerArgs(stage, imageId, testPaths, name) {
     '--test', '--test-reporter=tap', '--', ...testPaths];
 }
 
+export function completedContainerExit(state, clientCode) {
+  if (state?.Status !== 'exited' || state.Running || !Number.isInteger(state.ExitCode) || state.Error || (state.ExitCode === 0 && clientCode !== 0)) {
+    throw new Error('Container did not finish normally.');
+  }
+  return state.ExitCode;
+}
+
 export async function runIsolated({ repositoryDir, commitSha, testPaths, timeoutMs = 30_000, maxOutputBytes = 65_536 }) {
   if (process.platform !== 'linux') throw new Error('Runner requires a disposable Linux Docker host; no host fallback.');
   if (typeof repositoryDir !== 'string' || !repositoryDir.trim()) throw new Error('Trusted repository directory required.');
@@ -103,8 +110,7 @@ export async function runIsolated({ repositoryDir, commitSha, testPaths, timeout
     let exitCode = execution.code;
     if (!execution.stopped) {
       const state = JSON.parse((await checked('docker', ['inspect', '--format={{json .State}}', name])).toString());
-      if (state.Running || !Number.isInteger(state.ExitCode) || state.Error) throw new Error('Container did not finish normally.');
-      exitCode = state.ExitCode;
+      exitCode = completedContainerExit(state, execution.code);
     }
     return { schemaVersion: 1, kind: 'taskproof-sandbox-execution', commitSha, imageId, testPaths,
       startedAt: new Date(started).toISOString(), durationMs: Date.now() - started,
