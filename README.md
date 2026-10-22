@@ -20,6 +20,8 @@ Tarayıcıda http://127.0.0.1:4317 adresini açın. PowerShell npm betiğini eng
 
 ## İlk sürüm
 
+GitHub formuna PR bağlantısı girilerek güncel head SHA, check, workflow ve job metadata'sı okunabilir. Public repo için anahtar zorunlu değil; rate limit uygulanır. Özel repo gerekiyorsa yalnız `TASKPROOF_GITHUB_TOKEN` ortam değişkeni üzerinden salt okuma yetkili token yapılandırılır. Anahtar arayüzde girilmez veya loglanmaz. Bu akış kabul şartlarını otomatik doğrulamaz.
+
 - Growth OS #175 için GitHub'dan alınmış, commit'e sabitlenmiş anlık görüntü.
 - Gerçek kayıtta beş kabul şartının tümü kanıt yetersiz: genel CI başarısı ve kaynakta test tanımı, davranışın çalıştırıldığını kanıtlamaz.
 - Ayrı ve açıkça işaretli sentetik örnekte dört farklı sonuç.

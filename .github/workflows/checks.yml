@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: read
+  actions: read
+  pull-requests: read
 
 jobs:
   test:
@@ -29,6 +31,10 @@ jobs:
           node --check public/app.js
       - name: Engine and HTTP tests (no loopback skip allowed)
         run: npm test
+      - name: Live read-only GitHub check (own PR only)
+        run: node test/github-live.mjs
+        env:
+          TASKPROOF_GITHUB_TOKEN: ${{ github.token }}
       - name: Install fixed browser test tooling
         run: npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
       - name: Install Chromium

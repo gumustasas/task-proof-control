@@ -22,6 +22,7 @@ Kullanıcının açtığı gumustasas/task-proof-control reposu GitHub bağlant�
 İnternet paneli/deployment ve çalışma zamanında canlı GitHub adapteri yok. Kaynak PR'ları sınayan otomatik runner yok. Bu projenin kendi motor/HTTP testleri için GitHub Actions workflow'u eklendi; PR kontrol sonucu GitHub'dan doğrulanmalı. CI'da loopback testinin atlanmasına izin verilmez. Ücretli model yok. Repo görünürlüğü veya uygulama erişim ayarları değiştirilmedi.
 
 ## Sıradaki iş
+T-003, PR #2 squash ile tamamlandı (1c0602e1f317ce122eb80ce850d514c1c5653eb1). Altı Chromium senaryosu ve 16 test geçti. Güncel aktif görev T-004: PR URL formu, güvenli GitHub API adapteri, metadata/kanıt ayrımı ve 11 ek test hazır. Yerelde 26 başarı, 1 loopback skip; hosted ve canlı API kontrolü yeni PR'da bekleniyor. Aşağıdaki önceki T-003 notları tarihsel kayıttır.
 Aktif çalışma: T-003 için altı Chromium kabul senaryosu eklendi. CI test aracı Playwright 1.56.1 olarak sabitlendi; uygulama çalışma zamanına bağımlılık eklenmedi. UI sonuçları ve ekran görüntüleri GitHub artifact olarak yedi gün tutulacak. İçe aktarılan kaydı tekrar seçme ve geç gelen ağ yanıtının yeni seçimi ezmesi düzeltildi. Bu senaryolar henüz başarılı sayılmıyor; yeni PR'ın CI sonucu okunmalı.
 T-003: HTTP kontrolü GitHub'da tamamlandı; tarayıcıda gerçek/sentetik kayıt ve import/export etkileşimini doğrula. Sonra T-004 salt okuma GitHub adapteri.
 

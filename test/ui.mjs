@@ -64,6 +64,14 @@ try {
     assert.deepEqual(errors, []);
   });
   await mkdir('test-results', {recursive:true});
+  await check('UI-07: GitHub form shows metadata separately from acceptance results', async () => {
+    await page.route('**/api/github',route=>route.fulfill({status:200,contentType:'application/json',body:JSON.stringify({repository:'example/live',prNumber:2,headSha:'c'.repeat(40),title:'Canlı metadata örneği',calls:5,warnings:[],interpretation:'CI metadata; davranış kanıtı değildir.',observations:[{kind:'workflow',name:'checks',conclusion:'success'}]})}));
+    await page.locator('#pr-url').fill('https://github.com/example/live/pull/2');
+    await page.locator('#github-load').click();
+    await expect(page.locator('#github-result')).toContainText('example/live');
+    await expect(page.locator('#stats .verified strong')).toHaveText('0');
+    await expect(page.locator('#stats .insufficient strong')).toHaveText('5');
+  });
   await page.screenshot({path:'test-results/mobile.png', fullPage:true});
   await page.setViewportSize({width:1365,height:900});
   await page.screenshot({path:'test-results/desktop.png', fullPage:true});
