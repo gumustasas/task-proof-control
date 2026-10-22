@@ -20,3 +20,9 @@ Aynı commit/kriter için passed ve failed birlikteyse failed. Otomatik olarak s
 ## ADR-006 — Güven beyanı görünür
 22 Ekim T-003: Playwright 1.56.1 yalnız sabitlenmiş CI/geliştirme test aracı olarak kullanılır. Uygulama hâlâ Node standart kütüphaneleriyle çalışır. Runtime bağımlılıksızlık şartı korunur; test araçları ayrı değerlendirilir.
 İçe aktarılan kayıtlar kriptografik olarak doğrulanmış değildir. Eşlemeyi inceleyen adı bir imza değildir. Kullanıcı bu sınıra panelde erişebilmeli.
+
+## ADR-007 — Dar ve bağımsız runner
+T-006 ayrı CLI ve geçici Linux Docker host kullanır. Kaynak kod panel sunucusunda çalışmaz. İlk profil yalnız offline Node built-in testleridir; repo shell/npm hook/Dockerfile veya online dependency install kabul edilmez. Image ID, exact source commit ve limitler raporlanır. Container shared-kernel sınırı belgelenir. Kaynak stdout'u otomatik davranış kanıtına çevrilmez.
+
+## ADR-008 — Ön ölçüm ve gerçek faydayı ayır
+T-008'in iki gerçek PR'a bağlı ön kontrolü, seçilmiş UI kanıtı ile doğrudan kanıt eksikliğini ayırır. İnsan baseline, bilinen kod hatası ve kaynak preview doğrulaması eksikken tam fayda deneyi tamamlandı sayılmaz. Motorun yerel milisaniyesi insan zaman tasarrufu değildir. Ölçülmeyen değerler null kalır.

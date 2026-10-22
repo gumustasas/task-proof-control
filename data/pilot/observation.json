@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "kind": "github-observation",
+  "repository": "gumustasas/task-proof-control",
+  "prNumber": 5,
+  "headSha": "038cf349403bfe898cb3ad28f9c11756db38b304",
+  "collectedAt": "2026-10-22T15:36:10Z",
+  "complete": false,
+  "warnings": [
+    "Selected run only; connector metadata snapshot, not complete adapter collection."
+  ],
+  "observations": [
+    {
+      "kind": "workflow",
+      "id": 39806257000,
+      "commitSha": "038cf349403bfe898cb3ad28f9c11756db38b304",
+      "status": "completed",
+      "conclusion": "success",
+      "attempt": 1,
+      "url": "https://github.com/gumustasas/task-proof-control/actions/runs/39806257000"
+    }
+  ]
+}

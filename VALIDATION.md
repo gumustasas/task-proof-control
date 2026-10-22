@@ -42,3 +42,13 @@ Growth OS #175 için bu oturumda davranış testleri veya production/preview üz
 - T-005, PR #4, head caaa8fc87c6f127f9afd1a7df1e32bb0b28a78db: run 39804912250, 38/38, yedi Chromium ve canlı GitHub. Job 119915418060 log özeti okundu; sıfır skip/failure. Squash a8c0b5989a18712d79e2797922bc760e1b943ad8.
 
 T-006 yerel: 41 başarı, bir loopback EACCES skip. Docker CLI var, daemon kapalı; canlı Docker testleri henüz bekleniyor.
+
+## T-006 hosted sonucu
+
+Run 39806257000 / job 119920156618, head 038cf349403bfe898cb3ad28f9c11756db38b304: 42/42 test, sıfır skip/failure; yedi Chromium ve canlı salt okuma geçti. Docker exact-commit 14 motor testi ve beş izolasyon/limit probu geçti. Özellikle intentional failure failed, hang timeout, loud output-limit, file-limit failed olarak gözlendi; bu negatif sonuçlar testin beklenen davranışıdır, gizlenmedi. PR #5 squash f19be0b39d39ebfb995bd44d9fe31bd651a8b571.
+
+T-008 ön ölçüm yerelde çalıştırıldı: 3 verified, 5 insufficient; insan baseline ve zaman kazancı ölçülmedi. Kaynak preview T-007 çalıştırılmadı.
+
+## Ön ölçüm ve hazırlık PR #6
+
+Head 5f60626fa4a5d32a2811aae57d347da2d372c238, run 39807275638 / job 119923737530: 42/42, sıfır skip/failure; yedi Chromium, Docker, canlı salt okuma ve pilot beklenti kontrolü geçti. Loglar ayrıca okundu. Yerel tüm 11 JS/MJS kaynak syntax kontrolü ve CLI ile üç linked scenario snapshot sonucu da geçti. Kaynak Growth OS preview davranışları ve insan karşılaştırması açık kalır.

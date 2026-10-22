@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "kind": "taskproof-ui-results",
+  "repository": "gumustasas/task-proof-control",
+  "commitSha": "038cf349403bfe898cb3ad28f9c11756db38b304",
+  "runId": "39806257000",
+  "runAttempt": 1,
+  "observedAt": "2026-10-22T15:36:10Z",
+  "source": "Operator transcription from job 119920156618 PASS lines; not downloaded/authenticated artifact bytes",
+  "results": [
+    {
+      "caseName": "UI-01: real snapshot never implies verified behavior",
+      "outcome": "passed"
+    },
+    {
+      "caseName": "UI-02: synthetic data stays visibly separated",
+      "outcome": "passed"
+    },
+    {
+      "caseName": "UI-03: exported report round-trips and remains selectable",
+      "outcome": "passed"
+    },
+    {
+      "caseName": "UI-04: invalid import keeps last valid data",
+      "outcome": "passed"
+    },
+    {
+      "caseName": "UI-05: imported text cannot create HTML",
+      "outcome": "passed"
+    },
+    {
+      "caseName": "UI-06: mobile layout and browser errors",
+      "outcome": "passed"
+    },
+    {
+      "caseName": "UI-07: GitHub form shows metadata separately from acceptance results",
+      "outcome": "passed"
+    }
+  ]
+}

@@ -31,6 +31,8 @@ jobs:
           node --check public/app.js
       - name: Engine and HTTP tests (no loopback skip allowed)
         run: npm test
+      - name: Evidence-level pilot expectations (no human time-savings claim)
+        run: node src/pilot.mjs
       - name: Live read-only GitHub check (own PR only)
         run: node test/github-live.mjs
         env:
