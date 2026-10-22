@@ -1,0 +1,28 @@
+name: TaskProof checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      TASKPROOF_REQUIRE_HTTP: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        run: |
+          node --check src/engine.mjs
+          node --check src/server.mjs
+          node --check public/app.js
+      - name: Engine and HTTP tests (no loopback skip allowed)
+        run: npm test

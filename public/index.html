@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TaskProof — Görev doğrulama</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<aside><a class="brand" href="/">Task<span>Proof</span><small>GÖREV DOĞRULAMA</small></a><div class="nav-label">ÇALIŞMA ALANI</div><div class="nav active">◉ &nbsp; Doğrulama</div><div class="aside-note">Kanıtları görün.<br>Eksikleri bilin.</div><p class="version">Yerel prototip · v0.1</p></aside>
+<main><header><div><p class="eyebrow">GÖREVDEN KANITA</p><h1>Gerçekten tamamlandı mı?</h1><p class="subtitle">Her kabul şartını, ait olduğu commit’in kanıtlarıyla değerlendirin.</p></div><span class="local">● Yerel çalışma</span></header>
+<section class="toolbar"><label>İncelenen kayıt<select id="snapshot"><option value="real">Growth OS · PR #175 · GitHub anlık görüntüsü</option><option value="demo">Örnek senaryolar · Sentetik veri</option></select></label><div class="actions"><label class="button secondary">Kayıt içe aktar<input id="import" type="file" accept="application/json,.json" hidden></label><button id="export" class="button">Raporu indir</button></div></section>
+<div id="error" role="alert" hidden></div><div id="demo-banner" hidden>ÖRNEK VERİ — Bu sonuçlar programı sınamak içindir; gerçek bir PR doğrulaması değildir.</div>
+<section class="project"><div><p class="eyebrow" id="repo"></p><h2 id="title">Kayıt yükleniyor…</h2><p id="commit"></p></div><span id="verdict" class="verdict"></span></section>
+<section id="stats" class="stats" aria-label="Sonuç özeti"></section>
+<section class="criteria"><div class="section-head"><h2>Kabul şartları</h2><span id="total"></span></div><p class="section-note">Genel test başarısı, tek başına bir davranışın doğrulandığı anlamına gelmez.</p><div id="rows"></div></section>
+<section class="limits"><h3>Bu raporun kapsamı</h3><ul id="caveats"></ul></section>
+<footer>Her sonuç bir kanıta, her kanıt bir commit’e bağlıdır.</footer></main><script type="module" src="/app.js"></script>
+</body></html>

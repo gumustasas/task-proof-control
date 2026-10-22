@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "mode": "github-snapshot",
+  "repository": "gumustasas/buzsu-growth-os",
+  "prNumber": 175,
+  "headSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+  "title": "Site İçerik Envanteri — ilk kanıt incelemesi",
+  "collectedAt": "2026-10-22T14:22:28.807Z",
+  "criteria": [
+    {
+      "id": "AC-01",
+      "title": "Özellik kapalıyken sayfa 404 döner ve menüde görünmez",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "AC-02",
+      "title": "Tarama yalnız elle başlar",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "AC-03",
+      "title": "İlk keşif süre bütçesine uyar ve kaldığı yerden devam eder",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "AC-04",
+      "title": "Okunamayan kapsam dışı kategori taramayı durdurur ve panelde nedeni görünür",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "AC-05",
+      "title": "Türü bilinmeyen okunamayan adres varken kapsam tam gösterilmez",
+      "requiredLevel": "behavior"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-CLAIM",
+      "kind": "claim",
+      "outcome": "pending",
+      "commitSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+      "criterionIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-05"
+      ],
+      "summary": "PR açıklaması bu davranışları vaat ediyor. Yazar beyanı bağımsız çalıştırma kanıtı değildir.",
+      "provenance": "GitHub connector: get_pr_info",
+      "url": "https://github.com/gumustasas/buzsu-growth-os/pull/175"
+    },
+    {
+      "id": "E-CI",
+      "kind": "workflow",
+      "outcome": "passed",
+      "commitSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+      "criterionIds": [
+        "AC-01",
+        "AC-02",
+        "AC-03",
+        "AC-04",
+        "AC-05"
+      ],
+      "summary": "Content Studio checks koşusu 39683312194 başarılı. Bu oturumda test bazlı loglar ve browser sonuçları alınmadı; koşu tek tek şartları doğrulamaz.",
+      "provenance": "GitHub connector: commit SHA ile sorgulanan workflow_runs; güncel canlı izleme yok",
+      "url": "https://github.com/gumustasas/buzsu-growth-os/actions/runs/39683312194"
+    },
+    {
+      "id": "E-FLAG-SOURCE",
+      "kind": "source",
+      "outcome": "passed",
+      "commitSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+      "criterionIds": [
+        "AC-01"
+      ],
+      "summary": "Kaynakta 'bayrak varsayılan kapalı; yalnız \"true\" açar' testi var. Sayfa 404 ve menü davranışı bu kaynak kontrolüyle çalıştırılmış sayılmaz.",
+      "provenance": "Commit sabitlenmiş test dosyası incelemesi",
+      "url": "https://github.com/gumustasas/buzsu-growth-os/blob/a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08/mcp-server/src/site-content.test.ts"
+    },
+    {
+      "id": "E-RESUME-SOURCE",
+      "kind": "source",
+      "outcome": "passed",
+      "commitSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+      "criterionIds": [
+        "AC-03"
+      ],
+      "summary": "Süre bütçesi ve devam için regresyon test tanımı var. Test içeriği sahte saat ve bellek deposuyla çalışıyor; gerçek ortam kesintisi ve kalıcı depo henüz doğrulanmadı.",
+      "provenance": "Commit sabitlenmiş test dosyası incelemesi",
+      "url": "https://github.com/gumustasas/buzsu-growth-os/blob/a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08/mcp-server/src/site-content.test.ts"
+    },
+    {
+      "id": "E-SCOPE-SOURCE",
+      "kind": "source",
+      "outcome": "passed",
+      "commitSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+      "criterionIds": [
+        "AC-04"
+      ],
+      "summary": "Bot koruması ve ürün listesi bulunamaması için testler var. Panelde hata metninin görünmesi için tarayıcı sonucu henüz yok.",
+      "provenance": "Commit sabitlenmiş test dosyası incelemesi",
+      "url": "https://github.com/gumustasas/buzsu-growth-os/blob/a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08/mcp-server/src/site-content.test.ts"
+    },
+    {
+      "id": "E-COVERAGE-SOURCE",
+      "kind": "source",
+      "outcome": "passed",
+      "commitSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+      "criterionIds": [
+        "AC-05"
+      ],
+      "summary": "Türü bilinmeyen okunamayan adres için kapsam regresyon testi var. Test bazlı çalıştırma sonucu henüz içe aktarılmadı.",
+      "provenance": "Commit sabitlenmiş test dosyası incelemesi",
+      "url": "https://github.com/gumustasas/buzsu-growth-os/blob/a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08/mcp-server/src/site-content.test.ts"
+    }
+  ]
+}
