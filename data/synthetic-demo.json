@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "mode": "synthetic",
+  "repository": "example/demo",
+  "prNumber": 1,
+  "headSha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "title": "Dört sonuç durumunun örnek gösterimi",
+  "collectedAt": "2026-10-22T14:22:28.807Z",
+  "criteria": [
+    {
+      "id": "AC-01",
+      "title": "Filtre yenileme sonrasında korunuyor",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "AC-02",
+      "title": "Filtre temizleme düğmesi çalışıyor",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "AC-03",
+      "title": "Mobil menü çalışıyor",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "AC-04",
+      "title": "Boş liste açıklaması gösteriliyor",
+      "requiredLevel": "behavior"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "D-1",
+      "kind": "browser-result",
+      "outcome": "passed",
+      "commitSha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "criterionIds": [
+        "AC-01"
+      ],
+      "summary": "Sentetik: filtre seçildi, sayfa yenilendi ve seçim aynı kaldı.",
+      "provenance": "synthetic-example",
+      "caseName": "filter persists",
+      "runId": "DEMO-1",
+      "mappingReviewedBy": "Sentetik örnek",
+      "observedAt": "2026-10-22T14:22:28.807Z"
+    },
+    {
+      "id": "D-2",
+      "kind": "browser-result",
+      "outcome": "failed",
+      "commitSha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "criterionIds": [
+        "AC-02"
+      ],
+      "summary": "Sentetik: temizleme tıklaması filtre değerini kaldırmadı.",
+      "provenance": "synthetic-example",
+      "caseName": "filter clears",
+      "runId": "DEMO-1",
+      "mappingReviewedBy": "Sentetik örnek",
+      "observedAt": "2026-10-22T14:22:28.807Z"
+    },
+    {
+      "id": "D-3",
+      "kind": "test-result",
+      "outcome": "passed",
+      "commitSha": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "criterionIds": [
+        "AC-03"
+      ],
+      "summary": "Sentetik: bu sonuç başka commit’e ait.",
+      "provenance": "synthetic-example",
+      "caseName": "mobile menu",
+      "runId": "DEMO-OLD",
+      "mappingReviewedBy": "Sentetik örnek",
+      "observedAt": "2026-10-22T14:22:28.807Z"
+    },
+    {
+      "id": "D-4",
+      "kind": "workflow",
+      "outcome": "passed",
+      "commitSha": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "criterionIds": [
+        "AC-04"
+      ],
+      "summary": "Sentetik: yalnız genel test başarısı mevcut.",
+      "provenance": "synthetic-example"
+    }
+  ]
+}
