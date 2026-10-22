@@ -78,7 +78,7 @@ try {
 } catch (e) { failure = e; console.error(e.message); }
 finally {
   await mkdir('test-results', {recursive:true});
-  const report = {schemaVersion:1,kind:'taskproof-ui-results',commitSha:process.env.TASKPROOF_COMMIT_SHA ?? null,runId:process.env.GITHUB_RUN_ID ?? 'local',observedAt:new Date().toISOString(),results};
+  const report = {schemaVersion:1,kind:'taskproof-ui-results',repository:process.env.GITHUB_REPOSITORY??null,commitSha:process.env.TASKPROOF_COMMIT_SHA ?? null,runId:process.env.GITHUB_RUN_ID ?? 'local',runAttempt:Number(process.env.GITHUB_RUN_ATTEMPT??1),observedAt:new Date().toISOString(),results};
   await writeFile('test-results/ui-results.json', JSON.stringify(report,null,2));
   await browser?.close(); server.closeAllConnections(); await new Promise((resolve) => server.close(resolve));
   await rm(temp,{recursive:true,force:true});
