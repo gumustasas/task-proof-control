@@ -30,7 +30,7 @@ flowchart TD
   M --> K["Karar motoru ve panel"]
 ```
 
-GitHub metadata adapteri `src/github.mjs` ve incelenen sonuç adapteri `src/scenarios.mjs` uygulanmıştır. Metadata kendi başına kabul şartı doğrulamaz. Sonuç dosyaları operatörce alınır; `src/import-results.mjs` repo/PR/SHA/run/attempt ve eşleme alanlarını kontrol eder. Runner ve kaynak preview testleri sonraki görevlerdir.
+GitHub metadata adapteri `src/github.mjs` ve incelenen sonuç adapteri `src/scenarios.mjs` uygulanmıştır. Metadata kendi başına kabul şartı doğrulamaz. Sonuç dosyaları operatörce alınır; `src/import-results.mjs` repo/PR/SHA/run/attempt ve eşleme alanlarını kontrol eder. Ayrı `src/runner.mjs` dar Node profilini geçici Linux Docker host'ta çalıştırır; dashboard shell endpoint'i yoktur. Kaynak preview testleri sonraki görevdir.
 
 ## Veri ilişkileri
 | Nesne | Kimlik ve bağlantı |

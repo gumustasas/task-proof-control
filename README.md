@@ -33,6 +33,8 @@ Tarayıcı kabul testleri için (isteğe bağlı geliştirme aracı): `npm insta
 
 GitHub adapteri yalnız metadata okur. İncelenen senaryo sonuçları CLI ile snapshot'a eklenebilir: [senaryo sözleşmesi](docs/scenario-evidence.md). Kaynak PR kodu panel sunucusunda çalıştırılmaz. Veritabanı veya ücretli model API'si kullanılmaz. İçe aktarılan JSON operatör beyanıdır; sahte bir JSON'u gerçek GitHub attestation gibi doğrulayamaz. Bu sınır panelde ve mimaride açıkça belirtilir.
 
+İsteğe bağlı ayrı [runner CLI](docs/runner.md), geçici Linux Docker host'ta yalnız Node built-in testlerini ağsız ve kaynak limitleriyle çalıştırır. Panel kullanımı için Docker gerekmez. Runner başarısı tek başına kabul şartı doğrulaması değildir.
+
 ## Claude veya Codex ile devam
 
 Önce `START_HERE.md`, sonra `AGENTS.md`, `STATE.md`, `TASKS.md` okunmalı. Kopyalanabilir devam mesajı: `CLAUDE_CONTINUE.md`.

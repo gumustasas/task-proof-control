@@ -33,3 +33,12 @@ GitHub ilk PR kontrolü (39800726767) atlamasız çalıştı: 15 başarı, 1 hat
 6. Telefon genişliğinde okunabilirlik ve konsol hatalarını kontrol et.
 
 Growth OS #175 için bu oturumda davranış testleri veya production/preview üzerinde işlemler çalıştırılmadı.
+
+## T-003, T-004 ve T-005 hosted sonuçları
+
+Önceki yerel tarayıcı engeli hosted CI'da çözüldü; yukarıdaki ilk deneme notları tarihsel kayıttır.
+- T-003, PR #2, head 9adccbc94597315e59a028c5196bb35dba44c613: run 39803038748, 16/16 ve altı Chromium.
+- T-004, PR #3, head 3f3f0090985865389d038f6fa7a6b538da00faf6: run 39803768215, 27/27, yedi Chromium ve canlı GitHub.
+- T-005, PR #4, head caaa8fc87c6f127f9afd1a7df1e32bb0b28a78db: run 39804912250, 38/38, yedi Chromium ve canlı GitHub. Job 119915418060 log özeti okundu; sıfır skip/failure. Squash a8c0b5989a18712d79e2797922bc760e1b943ad8.
+
+T-006 yerel: 41 başarı, bir loopback EACCES skip. Docker CLI var, daemon kapalı; canlı Docker testleri henüz bekleniyor.
