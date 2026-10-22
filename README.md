@@ -2,7 +2,7 @@
 
 **Çalışma adı:** TaskProof. **Repo:** https://github.com/gumustasas/task-proof-control
 
-İlk geliştirme dalı `feat/bootstrap`; PR birleştirildiğinde başlangıç sürümü `main` üzerinden kullanılabilir. Aktif geliştirme Codex ile sürer; başka bir asistan gerekirse `START_HERE.md` üzerinden devam edebilir.
+Başlangıç sürümü `main` üzerinde kullanılabilir. Aktif geliştirme Codex ile sürer; başka bir asistan gerekirse `START_HERE.md` üzerinden devam edebilir.
 
 Bir yazılım görevinin kabul şartlarını, aynı commit'e ait kanıtlarla gösteren bağımsız yerel prototip.
 
@@ -31,7 +31,7 @@ GitHub formuna PR bağlantısı girilerek güncel head SHA, check, workflow ve j
 ## Kapsam ve güven
 Tarayıcı kabul testleri için (isteğe bağlı geliştirme aracı): `npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1`, `npx playwright install chromium`, `npm run test:ui`. CI aynı sürümle Chromium'u çalıştırır. Normal panel kullanımı için bu paket gerekmez.
 
-Bu sürüm GitHub'a canlı bağlanmaz, test çalıştırmaz, veri tabanına yazmaz, paid API çağırmaz. Kaynak kayıtlar bu oturumda GitHub bağlantısından okunarak hazırlanmıştır. İçe aktarılan JSON operatör beyanıdır; sahte bir JSON'u gerçek GitHub attestation gibi doğrulayamaz. Bu sınır panelde ve mimaride açıkça belirtilir.
+GitHub adapteri yalnız metadata okur. İncelenen senaryo sonuçları CLI ile snapshot'a eklenebilir: [senaryo sözleşmesi](docs/scenario-evidence.md). Kaynak PR kodu panel sunucusunda çalıştırılmaz. Veritabanı veya ücretli model API'si kullanılmaz. İçe aktarılan JSON operatör beyanıdır; sahte bir JSON'u gerçek GitHub attestation gibi doğrulayamaz. Bu sınır panelde ve mimaride açıkça belirtilir.
 
 ## Claude veya Codex ile devam
 

@@ -14,12 +14,12 @@ flowchart TD
 ```
 
 - `src/engine.mjs`: saf şema kontrolü ve karar fonksiyonu. Sunucu ve tarayıcı aynı motoru kullanır.
-- `src/server.mjs`: yalnız localhost 4317; GET; sabit route izin listesi. Repo dosyalarını genel statik dizin olarak açmaz.
+- `src/server.mjs`: yalnız localhost 4317; sabit GET route listesi ve aynı-origin POST /api/github. Repo dosyalarını genel statik dizin olarak açmaz.
 - `public/`: bağımlılıksız arayüz; dinamik metinler textContent ile yazılır. Dış font/CDN/script yok.
 - `data/`: GitHub bağlantısıyla alınan manuel snapshot ve ayrı sentetik fixture. Tarihli, tam commit SHA ile kayıt.
 - `src/report.mjs`: aynı motorla komut satırı çıktısı.
 
-## Sonraki katmanlar (henüz uygulanmadı)
+## Adapterler ve sonraki runner katmanı
 ```mermaid
 flowchart TD
   G["GitHub salt okuma adapteri"] --> S["Kaynak snapshot"]
@@ -29,6 +29,8 @@ flowchart TD
   O --> M
   M --> K["Karar motoru ve panel"]
 ```
+
+GitHub metadata adapteri `src/github.mjs` ve incelenen sonuç adapteri `src/scenarios.mjs` uygulanmıştır. Metadata kendi başına kabul şartı doğrulamaz. Sonuç dosyaları operatörce alınır; `src/import-results.mjs` repo/PR/SHA/run/attempt ve eşleme alanlarını kontrol eder. Runner ve kaynak preview testleri sonraki görevlerdir.
 
 ## Veri ilişkileri
 | Nesne | Kimlik ve bağlantı |
