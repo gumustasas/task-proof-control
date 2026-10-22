@@ -48,3 +48,7 @@ T-006 yerel: 41 başarı, bir loopback EACCES skip. Docker CLI var, daemon kapal
 Run 39806257000 / job 119920156618, head 038cf349403bfe898cb3ad28f9c11756db38b304: 42/42 test, sıfır skip/failure; yedi Chromium ve canlı salt okuma geçti. Docker exact-commit 14 motor testi ve beş izolasyon/limit probu geçti. Özellikle intentional failure failed, hang timeout, loud output-limit, file-limit failed olarak gözlendi; bu negatif sonuçlar testin beklenen davranışıdır, gizlenmedi. PR #5 squash f19be0b39d39ebfb995bd44d9fe31bd651a8b571.
 
 T-008 ön ölçüm yerelde çalıştırıldı: 3 verified, 5 insufficient; insan baseline ve zaman kazancı ölçülmedi. Kaynak preview T-007 çalıştırılmadı.
+
+## Ön ölçüm ve hazırlık PR #6
+
+Head 5f60626fa4a5d32a2811aae57d347da2d372c238, run 39807275638 / job 119923737530: 42/42, sıfır skip/failure; yedi Chromium, Docker, canlı salt okuma ve pilot beklenti kontrolü geçti. Loglar ayrıca okundu. Yerel tüm 11 JS/MJS kaynak syntax kontrolü ve CLI ile üç linked scenario snapshot sonucu da geçti. Kaynak Growth OS preview davranışları ve insan karşılaştırması açık kalır.
