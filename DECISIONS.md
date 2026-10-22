@@ -18,4 +18,5 @@ Node.js standart kütüphaneleri, JSON, tarayıcı JS. Bir PR üzerinde yaklaş�
 Aynı commit/kriter için passed ve failed birlikteyse failed. Otomatik olarak son başarılı koşuyu seçip önceki hatayı gizleme yok. Flaky/yeniden koşu supersession modeli T-005'te açık biçimde tasarlanmalı.
 
 ## ADR-006 — Güven beyanı görünür
+22 Ekim T-003: Playwright 1.56.1 yalnız sabitlenmiş CI/geliştirme test aracı olarak kullanılır. Uygulama hâlâ Node standart kütüphaneleriyle çalışır. Runtime bağımlılıksızlık şartı korunur; test araçları ayrı değerlendirilir.
 İçe aktarılan kayıtlar kriptografik olarak doğrulanmış değildir. Eşlemeyi inceleyen adı bir imza değildir. Kullanıcı bu sınıra panelde erişebilmeli.

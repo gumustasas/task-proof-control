@@ -10,12 +10,15 @@ permissions:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     env:
       TASKPROOF_REQUIRE_HTTP: '1'
+      TASKPROOF_COMMIT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -26,3 +29,16 @@ jobs:
           node --check public/app.js
       - name: Engine and HTTP tests (no loopback skip allowed)
         run: npm test
+      - name: Install fixed browser test tooling
+        run: npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser acceptance checks
+        run: npm run test:ui
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: taskproof-ui-results
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 7

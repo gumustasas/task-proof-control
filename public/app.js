@@ -1,6 +1,8 @@
 import { evaluateSnapshot, STATUSES } from '/engine.js';
 let snapshot;
 let report;
+let importedSnapshot;
+let loadVersion = 0;
 const $ = (id) => document.getElementById(id);
 const names = { claim: 'PR açıklaması', source: 'Kaynak incelemesi', workflow: 'Genel GitHub kontrolü', 'test-result': 'Senaryo sonucu', 'browser-result': 'Tarayıcı sonucu' };
 function element(tag, text, className) {
@@ -42,16 +44,25 @@ function render(s) {
 }
 function showError(e) { $('error').textContent = e.message || 'Kayıt yüklenemedi.'; $('error').hidden = false; }
 async function load(url) {
-  try { const r = await fetch(url); if (!r.ok) throw new Error('Kayıt yüklenemedi.'); render(await r.json()); }
-  catch (e) { showError(e); }
+  const version = ++loadVersion;
+  try {
+    const r = await fetch(url); if (!r.ok) throw new Error('Kayıt yüklenemedi.');
+    const data = await r.json(); if (version === loadVersion) render(data);
+  }
+  catch (e) { if (version === loadVersion) showError(e); }
 }
-$('snapshot').addEventListener('change', (e) => load(e.target.value === 'demo' ? '/api/demo' : '/api/snapshot'));
+$('snapshot').addEventListener('change', (e) => {
+  if (e.target.value === 'imported' && importedSnapshot) { ++loadVersion; render(importedSnapshot); return; }
+  load(e.target.value === 'demo' ? '/api/demo' : '/api/snapshot');
+});
 $('import').addEventListener('change', async (e) => {
   const file = e.target.files[0]; if (!file) return;
   try {
     if (file.size > 2_000_000) throw new Error('Kayıt en fazla 2 MB olabilir.');
     const payload = JSON.parse(await file.text());
-    render(payload.snapshot ?? payload);
+    const candidate = payload.snapshot ?? payload;
+    evaluateSnapshot(candidate);
+    ++loadVersion; importedSnapshot = candidate; render(candidate);
     let custom = $('snapshot').querySelector('[value="imported"]');
     if (!custom) { custom = element('option', 'İçe aktarılan kayıt'); custom.value = 'imported'; $('snapshot').append(custom); }
     $('snapshot').value = 'imported';

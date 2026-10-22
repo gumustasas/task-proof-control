@@ -27,6 +27,7 @@ Tarayıcıda http://127.0.0.1:4317 adresini açın. PowerShell npm betiğini eng
 - CLI raporu: `npm run report` veya `node src/report.mjs path/to/snapshot.json`.
 
 ## Kapsam ve güven
+Tarayıcı kabul testleri için (isteğe bağlı geliştirme aracı): `npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1`, `npx playwright install chromium`, `npm run test:ui`. CI aynı sürümle Chromium'u çalıştırır. Normal panel kullanımı için bu paket gerekmez.
 
 Bu sürüm GitHub'a canlı bağlanmaz, test çalıştırmaz, veri tabanına yazmaz, paid API çağırmaz. Kaynak kayıtlar bu oturumda GitHub bağlantısından okunarak hazırlanmıştır. İçe aktarılan JSON operatör beyanıdır; sahte bir JSON'u gerçek GitHub attestation gibi doğrulayamaz. Bu sınır panelde ve mimaride açıkça belirtilir.
 
