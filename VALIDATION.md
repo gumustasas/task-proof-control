@@ -52,3 +52,7 @@ T-008 ön ölçüm yerelde çalıştırıldı: 3 verified, 5 insufficient; insan
 ## Ön ölçüm ve hazırlık PR #6
 
 Head 5f60626fa4a5d32a2811aae57d347da2d372c238, run 39807275638 / job 119923737530: 42/42, sıfır skip/failure; yedi Chromium, Docker, canlı salt okuma ve pilot beklenti kontrolü geçti. Loglar ayrıca okundu. Yerel tüm 11 JS/MJS kaynak syntax kontrolü ve CLI ile üç linked scenario snapshot sonucu da geçti. Kaynak Growth OS preview davranışları ve insan karşılaştırması açık kalır.
+
+## Growth OS test ortamı — altyapı doğrulaması
+
+Deployment dpl_2FmyHTNAkArQ8c2vPLTAPygtUeaj READY ve kaynak SHA eşleşti. 12 dal özel preview env kaydı; ayrı boş DB'de 9 tablo; kısıtlı SQL rolünün miras auth tablosuna SELECT/INSERT=false. Son tarayıcı gözlemi /site-icerik → /giris?next=%2Fsite-icerik, ilk admin kurulumu görünür. Bu dış ortam kontrolleri TaskProof'un genel CI başarısından çıkarılmadı. İlk admin/oturum ve içerik tarama davranışları açık. Ayrıntı docs/test-environment-2026-10-22.md.

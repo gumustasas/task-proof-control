@@ -1,7 +1,7 @@
 # Çalışma durumu
 
 22 Ekim 2026. Yetkili repo: https://github.com/gumustasas/task-proof-control
-Kullanıcı görev sırası, kod kontrolü, PR, CI ve başarılı kontrolden sonra squash merge akışını yetkilendirdi. Codex devam ediyor. Kaynak Growth OS reposu salt okunur.
+Kullanıcı görev sırası, kod kontrolü, PR, CI ve başarılı kontrolden sonra squash merge akışını yetkilendirdi. Codex devam ediyor. Growth OS kodu/main/production değişmez; kullanıcının sonraki test ortamı hazırlığı talebi önizleme/ayrı test DB değişikliklerini ayrıca yetkilendirdi.
 
 ## Birleşen işler
 - T-001/T-002: motor, yerel panel, gerçek snapshot ve ayrı sentetik demo. PR #1.
@@ -27,3 +27,7 @@ Yerel ortam HTTP bağlantısını EACCES ile engelliyor; CI gerçek HTTP ve Chro
 
 ## Git devamlılığı
 Yerel geçmiş uzak başlangıçtan bağımsızdır; force push yapma. Uzak main üzerinden görev dalı aç; gerçek PR head SHA için CI sonuçlarını kontrol et. Yerel HEAD yalnız checkpoint'tir. Güncel uzak main/PR durumunu GitHub'dan doğrula; bu dosyadaki CI bekleniyor kaydı sonuç gelince güncellenmelidir.
+
+## 22 Ekim — Growth OS test ortamı hazırlandı
+
+Önceki T-007 altyapı engeli bu kayıtla güncellendi. Ayrı Neon dalında boş taskproof_preview_175 DB ve kısıtlı taskproof_app_175 rolü hazır; 9 tablo, sıfır auth/crawl. Dal özel 12 Vercel preview ayarı uygulandı. Son deployment dpl_2FmyHTNAkArQ8c2vPLTAPygtUeaj READY, kaynak SHA a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08. /site-icerik oturumsuz erişimi ilk admin kurulumuna yönlendi. Yeni admin kimlik bilgilerini kullanıcı belirlemeli; browser handoff gerekir. Sonraki iş: admin oturumu sonrası T-007 davranış senaryoları. Tam T-007 ve T-008 hâlâ açık. Ayrıntı: docs/test-environment-2026-10-22.md. Kaynak kod/main/production değiştirilmedi. Secret kaydı yok.
