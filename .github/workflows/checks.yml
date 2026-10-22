@@ -35,6 +35,12 @@ jobs:
         run: node test/github-live.mjs
         env:
           TASKPROOF_GITHUB_TOKEN: ${{ github.token }}
+      - name: Prepare trusted runner image
+        run: docker pull node:22-bookworm-slim
+      - name: Isolated runner acceptance checks
+        run: node test/runner-live.mjs
+        env:
+          TASKPROOF_CANARY: non-secret-inheritance-probe
       - name: Install fixed browser test tooling
         run: npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
       - name: Install Chromium

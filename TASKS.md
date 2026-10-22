@@ -6,8 +6,8 @@
 | T-002 Yerel panel ve örnek kayıt | Tamamlandı | T-001 | gerçek snapshot + sentetik demo + import/export |
 | T-003 Doğrulama ve taşınabilir devir | Tamamlandı — PR #2 squash | T-001, T-002 | GitHub'da 16/16 + 6 Chromium senaryosu; run 39803038748 |
 | T-004 GitHub salt okuma adapteri | Tamamlandı - PR #3 squash | T-003 | 27/27 test, 7 Chromium, canlı salt okuma; run 39803768215 |
-| T-005 Senaryo kanıtı alma ve eşleme | Kod hazır; PR/CI bekleniyor | T-004 | Operatör importu, run/attempt/SHA kontrolü ve atomik eşleme |
-| T-006 İzole runner tasarımı ve uygulaması | Bekliyor | T-005 | secret taşımayan sınırlı test ortamı |
+| T-005 Senaryo kanıtı alma ve eşleme | Tamamlandı - PR #4 squash | T-004 | 38/38 test, 7 Chromium, run 39804912250; operatör importu |
+| T-006 İzole runner tasarımı ve uygulaması | Kod hazır; PR/CI bekleniyor | T-005 | Linux Docker, exact commit, sınırlı Node built-in testleri |
 | T-007 Preview davranış kontrolü | Bekliyor | T-005, T-006 | uygun önizleme üzerinde tarayıcı senaryoları |
 | T-008 Gerçek fayda deneyi | Bekliyor | T-005; UI şartları için T-007 | olumlu/eksik PR karşılaştırması ve süre ölçümü |
 

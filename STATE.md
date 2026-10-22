@@ -9,8 +9,9 @@ Kullanıcı görev sırası, kod kontrolü, PR, CI ve başarılı kontrolden son
 - T-004: GitHub salt okuma, PR/head/check/run/job, bounded requests ve aynı-origin endpoint. PR #3 squash: 195686eebb4d6d9d977ecaa418dbe0b41144fa11. Koşu 39803768215: 27/27 test, yedi Chromium ve canlı salt okuma geçti.
 
 ## Aktif iş
-T-005: incelenen senaryo JSON importu. Atomik kriter eşleme, repo/PR/SHA/run/attempt kontrolü, eski denemeyi reddetme, skipped/pending ve failure koruması hazır. CLI çıktısı panelde import edilebilir snapshot. Yerel sonuç: 37 geçti, 1 loopback EACCES nedeniyle atlandı; hosted CI henüz bekleniyor. Dosya baytlarının kaynağı otomatik doğrulanmaz; operatör importu açıkça etiketlenir.
-Sonraki: T-005 PR/CI/squash, sonra T-006 izole runner. T-007 kaynak preview/test DB yetkisi gerektirir; henüz yapılandırılmadı. T-008 gerçek insan kontrol süresi ölçülmeden kazanç iddia edilmez.
+T-005 PR #4 squash ile tamamlandı: a8c0b5989a18712d79e2797922bc760e1b943ad8. Head caaa8fc87c6f127f9afd1a7df1e32bb0b28a78db, CI 39804912250: 38/38 test, sıfır skip/failure; yedi Chromium senaryosu ve canlı GitHub okuması geçti. Artifact baytları operatör importudur; kaynağı kriptografik olarak doğrulanmaz.
+T-006 kod hazır: ayrı Linux Docker runner, exact commit staging, ağsız, anahtar taşımayan kaynak limitli Node built-in test profili. Yerelde 41 geçti, bir HTTP EACCES skip; gerçek Docker CI denemesi henüz bekleniyor. Kod/CI kontrolü tamamlanınca PR squash, sonra T-007.
+T-007 kaynak preview/test DB yetkisi gerektirir; henüz yapılandırılmadı. T-008 insan kontrol süresi ölçülmeden zaman kazancı iddia edilmez.
 
 ## Çalıştırma
 Node.js >=22; `npm.cmd test`, `npm.cmd start`; panel http://127.0.0.1:4317.
