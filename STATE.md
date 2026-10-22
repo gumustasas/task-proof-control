@@ -14,7 +14,7 @@ Yetkili uzak repo: https://github.com/gumustasas/task-proof-control (kullanıcı
 - Mimari, roadmap, karar günlüğü, görev bağımlılıkları ve Claude devir girişi.
 
 ## Kontrol durumu
-15 test geçti, 0 başarısız, 1 ağ testi ortam nedeniyle atlandı. Tarayıcı erişimi zaman aşımına uğradığı için UI etkileşimi doğrulanmadı. Ayrıntılar VALIDATION.md.
+Yerelde 15 test geçti, 1 gerçek ağ testi ortam nedeniyle atlandı. GitHub Actions'ta 3706257b2692dc6953a69a1465f97e250979a80e commit'inin PR kontrolü 16/16 başarı, 0 başarısız ve 0 atlandı ile tamamlandı; gerçek HTTP kontrolü de geçti. Koşu: https://github.com/gumustasas/task-proof-control/actions/runs/39801102088 . Tarayıcı erişimi zaman aşımına uğradığı için UI etkileşimi henüz doğrulanmadı. Ayrıntılar VALIDATION.md.
 Gerçek örnek: 0 doğrulandı, 0 başarısız, 5 kanıt yetersiz, 0 eski. Bu sonuç dış PR'ın bozuk olduğunu göstermez; doğrudan davranış kanıtı toplanmadığını gösterir.
 
 ## Çevrimiçi durum
@@ -22,7 +22,7 @@ Kullanıcının açtığı gumustasas/task-proof-control reposu GitHub bağlant�
 İnternet paneli/deployment ve çalışma zamanında canlı GitHub adapteri yok. Kaynak PR'ları sınayan otomatik runner yok. Bu projenin kendi motor/HTTP testleri için GitHub Actions workflow'u eklendi; PR kontrol sonucu GitHub'dan doğrulanmalı. CI'da loopback testinin atlanmasına izin verilmez. Ücretli model yok. Repo görünürlüğü veya uygulama erişim ayarları değiştirilmedi.
 
 ## Sıradaki iş
-T-003: loopback erişimi olan ortamda tarayıcı/HTTP kontrolünü bitir. Sonra T-004 salt okuma GitHub adapteri.
+T-003: HTTP kontrolü GitHub'da tamamlandı; tarayıcıda gerçek/sentetik kayıt ve import/export etkileşimini doğrula. Sonra T-004 salt okuma GitHub adapteri.
 
 Başlangıç komutları:
 ```powershell

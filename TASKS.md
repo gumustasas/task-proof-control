@@ -4,7 +4,7 @@
 |---|---|---|---|
 | T-001 Kanıt sözleşmesi ve karar motoru | Tamamlandı | Yok | engine + testler + evidence-contract |
 | T-002 Yerel panel ve örnek kayıt | Tamamlandı | T-001 | gerçek snapshot + sentetik demo + import/export |
-| T-003 Doğrulama ve taşınabilir devir | Kısmi; gerçek tarayıcı kontrolü bekliyor | T-001, T-002 | motor/handler testleri geçti; loopback ve UI engelli; belgeler hazır |
+| T-003 Doğrulama ve taşınabilir devir | Kısmi; gerçek tarayıcı kontrolü bekliyor | T-001, T-002 | GitHub'da 16/16; HTTP geçti, UI kontrolü açık; belgeler hazır |
 | T-004 GitHub salt okuma adapteri | Planlandı, başlanmadı | T-003 | PR/head/run metadata; SHA ve sayfalama testleri |
 | T-005 Senaryo kanıtı alma ve eşleme | Bekliyor | T-004 | test sonuçları + incelenen kriter eşlemeleri |
 | T-006 İzole runner tasarımı ve uygulaması | Bekliyor | T-005 | secret taşımayan sınırlı test ortamı |

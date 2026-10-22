@@ -17,8 +17,13 @@
 ## Repo aktarım güncellemesi
 Kullanıcı daha sonra `gumustasas/task-proof-control` reposunu açtı. Repo ve main'deki tek başlangıç README'si bağlantıyla doğrulandı. İlk kod aktarımı için feat/bootstrap dalı seçildi. Önceki repo oluşturma engeli yeni hedefin varlığını etkilemez. Bu aktarım bir deployment veya uygulama UI doğrulaması değildir.
 
-## Sonraki ortamda yapılacaklar
-GitHub ilk PR kontrolü (39800726767) atlamasız çalıştı: 15 başarı, 1 hata. Gerçek HTTP Host testi, Node fetch ile Host başlığının beklenen biçimde gönderilmemesi nedeniyle 200/403 uyuşmazlığı verdi. Test raw node:http isteğiyle başlığı gerçekten gönderecek biçimde düzeltildi. Yeni koşunun sonucu GitHub'dan doğrulanmalı. Bu kayıt ilk başarısız sonucu saklar.
+## GitHub düzeltme sonucu
+3706257b2692dc6953a69a1465f97e250979a80e commit'i için ikinci koşu başarılı: 16 test, 16 başarı, 0 başarısız, 0 atlandı. Gerçek loopback HTTP testi de çalışıp geçti. Koşu: https://github.com/gumustasas/task-proof-control/actions/runs/39801102088 ; job: 119901683580. Node 22 üzerinde log özeti ayrı okunarak doğrulandı.
+
+## İlk PR kontrolünde bulunan sorun
+GitHub ilk PR kontrolü (39800726767) atlamasız çalıştı: 15 başarı, 1 hata. Gerçek HTTP Host testi, Node fetch ile Host başlığının beklenen biçimde gönderilmemesi nedeniyle 200/403 uyuşmazlığı verdi. Test raw node:http isteğiyle başlığı gerçekten gönderecek biçimde düzeltildi; ikinci koşu 16/16 geçti. Bu kayıt ilk başarısız sonucu saklar.
+
+## Açık tarayıcı kontrolü
 
 1. `npm.cmd test`: skip olmadan 16/16 beklenir.
 2. `npm.cmd start`, tarayıcıda http://127.0.0.1:4317.
