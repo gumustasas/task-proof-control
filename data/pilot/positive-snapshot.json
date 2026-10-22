@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "mode": "github-snapshot",
+  "repository": "gumustasas/task-proof-control",
+  "prNumber": 5,
+  "headSha": "038cf349403bfe898cb3ad28f9c11756db38b304",
+  "title": "TaskProof PR #5 — sınırlı UI kanıt deneyi",
+  "collectedAt": "2026-10-22T15:36:10Z",
+  "criteria": [
+    {
+      "id": "P-01",
+      "title": "Gerçek örnekte beş şart kanıt yetersiz gösterilir",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "P-02",
+      "title": "İndirilen rapor yeniden içe alınıp seçilebilir",
+      "requiredLevel": "behavior"
+    },
+    {
+      "id": "P-03",
+      "title": "Bozuk JSON son geçerli kaydı değiştirmez",
+      "requiredLevel": "behavior"
+    }
+  ],
+  "evidence": []
+}

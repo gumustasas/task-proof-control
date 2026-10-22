@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "repository": "gumustasas/task-proof-control",
+  "prNumber": 5,
+  "commitSha": "038cf349403bfe898cb3ad28f9c11756db38b304",
+  "reviewedBy": "Codex source inspection (not human baseline or authenticated identity)",
+  "reviewedAt": "2026-10-22T15:36:10Z",
+  "entries": [
+    {
+      "criterionId": "P-01",
+      "caseName": "UI-01: real snapshot never implies verified behavior"
+    },
+    {
+      "criterionId": "P-02",
+      "caseName": "UI-03: exported report round-trips and remains selectable"
+    },
+    {
+      "criterionId": "P-03",
+      "caseName": "UI-04: invalid import keeps last valid data"
+    }
+  ]
+}

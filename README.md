@@ -41,4 +41,6 @@ GitHub adapteri yalnız metadata okur. İncelenen senaryo sonuçları CLI ile sn
 
 Temel belgeler: `ARCHITECTURE.md`, `ROADMAP.md`, `docs/evidence-contract.md`, `DECISIONS.md`, `VALIDATION.md`.
 
+Ön ölçüm: `node src/pilot.mjs`; [sonuçların sınırı](docs/pilot.md). Growth OS preview için [hazırlık planı](docs/preview-plan.md). Kaynak uygulamanın davranış kontrolü ve insan zaman tasarrufu ölçümü henüz tamamlanmadı.
+
 Çevrimiçi repo, barındırma ve canlı bağlantı durumu için `STATE.md` yetkilidir. Bu dosya mevcut olanakları anlatır; gelecekteki özelliklerin tamamlandığı anlamına gelmez.

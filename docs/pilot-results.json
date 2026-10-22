@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "kind": "taskproof-preliminary-pilot",
+  "measuredAt": "2026-10-22T15:39:35.805Z",
+  "environment": {
+    "node": "v22.18.0",
+    "platform": "win32",
+    "arch": "x64"
+  },
+  "positive": {
+    "repository": "gumustasas/task-proof-control",
+    "prNumber": 5,
+    "commitSha": "038cf349403bfe898cb3ad28f9c11756db38b304",
+    "counts": {
+      "verified": 3,
+      "failed": 0,
+      "insufficient": 0,
+      "stale": 0
+    }
+  },
+  "evidenceGap": {
+    "repository": "gumustasas/buzsu-growth-os",
+    "prNumber": 175,
+    "commitSha": "a6fcd3057b067d40fe19cfbe0a661b09c6ec6e08",
+    "counts": {
+      "verified": 0,
+      "failed": 0,
+      "insufficient": 5,
+      "stale": 0
+    }
+  },
+  "engineTiming": {
+    "iterations": 1000,
+    "medianMs": 0.02360000000000184,
+    "p95Ms": 0.07319999999999993,
+    "includes": "in-memory import validation and both reports; excludes collection, browser, network and human review"
+  },
+  "falseVerifiedAgainstLimitedExpectedLabels": 0,
+  "missedBugs": null,
+  "humanReviewMinutes": null,
+  "timeSavedMinutes": null,
+  "limitations": [
+    "Preliminary evidence-level check, not a completed human comparison experiment.",
+    "Positive results were transcribed by Codex from GitHub job logs and matched to reviewed test source; imported bytes are not authenticated.",
+    "Only three selected TaskProof UI criteria are assessed, not all PR #5 requirements.",
+    "Growth OS #175 lacks direct scenario proof here; this is not proof of a code defect.",
+    "No adversarial mapping accuracy, real-world bug recall or human time savings have been measured."
+  ]
+}

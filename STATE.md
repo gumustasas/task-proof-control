@@ -8,10 +8,12 @@ Kullanıcı görev sırası, kod kontrolü, PR, CI ve başarılı kontrolden son
 - T-003: 16/16 test ve altı Chromium senaryosu. PR #2 squash: 1c0602e1f317ce122eb80ce850d514c1c5653eb1. Koşu 39803038748.
 - T-004: GitHub salt okuma, PR/head/check/run/job, bounded requests ve aynı-origin endpoint. PR #3 squash: 195686eebb4d6d9d977ecaa418dbe0b41144fa11. Koşu 39803768215: 27/27 test, yedi Chromium ve canlı salt okuma geçti.
 
-## Aktif iş
-T-005 PR #4 squash ile tamamlandı: a8c0b5989a18712d79e2797922bc760e1b943ad8. Head caaa8fc87c6f127f9afd1a7df1e32bb0b28a78db, CI 39804912250: 38/38 test, sıfır skip/failure; yedi Chromium senaryosu ve canlı GitHub okuması geçti. Artifact baytları operatör importudur; kaynağı kriptografik olarak doğrulanmaz.
-T-006 kod hazır: ayrı Linux Docker runner, exact commit staging, ağsız, anahtar taşımayan kaynak limitli Node built-in test profili. Yerelde 41 geçti, bir HTTP EACCES skip; gerçek Docker CI denemesi henüz bekleniyor. Kod/CI kontrolü tamamlanınca PR squash, sonra T-007.
-T-007 kaynak preview/test DB yetkisi gerektirir; henüz yapılandırılmadı. T-008 insan kontrol süresi ölçülmeden zaman kazancı iddia edilmez.
+## Güncel sonuç ve açık işler
+T-005 PR #4 squash: a8c0b5989a18712d79e2797922bc760e1b943ad8. CI 39804912250: 38/38, yedi Chromium ve canlı GitHub geçti. Artifact baytları operatör importudur; kaynağı kriptografik olarak doğrulanmaz.
+T-006 PR #5 squash: f19be0b39d39ebfb995bd44d9fe31bd651a8b571. Head 038cf349403bfe898cb3ad28f9c11756db38b304, run 39806257000 / job 119920156618: 42/42, sıfır skip/failure; yedi Chromium, canlı GitHub ve altı gerçek Docker denemesi geçti. Docker denemeleri exact-commit motor testleri, izolasyon/cgroup, bilinen failure, timeout, çıktı ve dosya limitini kapsar. Loglar okundu. Runner yalnız dar offline Node profilidir; genel çok kiracılı sandbox iddiası yok.
+T-007 ön koşul engeli: Growth OS #175 preview URL/deployment SHA, ayrı test DB kararı, yalnız Preview bayrağı ve test oturumu hazırlanmalı. Kaynak PR kontrol listesi okundu; Growth OS env/DB/deployment değiştirilmedi. docs/preview-plan.md somut hazırlık ve sekiz atomik senaryoyu içerir. Browser runner henüz kaynak preview üzerinde uygulanmadı.
+T-008 ön ölçüm hazır: üç seçilmiş TaskProof UI davranışı verified, beş Growth OS kriteri insufficient. CI loglarından operatör aktarımı, kimlik/byte attestation yok. İnsan inceleme süresi ve zaman kazancı ölçülmedi; tam fayda deneyi açık. docs/pilot.md ve pilot-results.json sınırları içerir.
+Aktif dal docs/preview-gates-and-pilot: hazırlık belgeleri, tekrar üretilebilir ön ölçüm ve CI beklenti kontrolü; PR/CI/squash henüz bekleniyor. Sonrasında bağımlılığı hazır yeni kod görevi yok: T-007 dış ön koşulları çözülünce bu plandan devam et. Kaynak projeye yazmadan önce kapsam ve test ortamı belirlenmeli.
 
 ## Çalıştırma
 Node.js >=22; `npm.cmd test`, `npm.cmd start`; panel http://127.0.0.1:4317.

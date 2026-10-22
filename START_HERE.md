@@ -1,7 +1,7 @@
 # Buradan devam et
 
 Repo: https://github.com/gumustasas/task-proof-control
-İlk çalışma dalı: `feat/bootstrap`. İlk PR birleştirilince yetkili başlangıç dalı `main` olur. Geliştirmeye Codex ile devam ediliyor; devir belgeleri gelecekteki devamlılık içindir.
+Yetkili başlangıç dalı `main`; ilk PR ve T-003–T-006 birleştirildi. Aktif görev ve açık ön koşullar STATE.md / TASKS.md içindedir. Geliştirmeye Codex ile devam ediliyor; devir belgeleri gelecekteki devamlılık içindir.
 
 ## Okuma sırası
 1. AGENTS.md — güven, kodlama ve devir kuralları.
