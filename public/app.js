@@ -75,3 +75,17 @@ $('export').addEventListener('click', () => {
   const url = URL.createObjectURL(blob); const a = element('a'); a.href = url; a.download = 'taskproof-report.json'; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
 });
 load('/api/snapshot');
+
+$('github-form').addEventListener('submit',async(e)=>{
+  e.preventDefault();const button=$('github-load');button.disabled=true;button.textContent='Okunuyor…';
+  try{
+    const r=await fetch('/api/github',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({url:$('pr-url').value})});
+    const data=await r.json();if(!r.ok)throw new Error(data.error??'GitHub okunamadı.');
+    const box=$('github-result');box.replaceChildren(element('h3',data.repository+' / PR #'+data.prNumber),element('p',data.title),element('small','Commit: '+data.headSha+' · '+data.calls+' istek'),element('p',data.interpretation));
+    for(const warning of data.warnings??[])box.append(element('p',warning,'warning'));
+    for(const item of data.observations){const p=element('p',(item.kind==='job'?'İş':item.kind==='check'?'Kontrol':'Workflow')+': '+item.name+' — '+(item.conclusion??item.status));box.append(p);}
+    if(!data.observations.length)box.append(element('p','Bu commit için kontrol kaydı bulunmadı.'));
+    $('error').hidden=true;
+  }catch(error){$('github-result').replaceChildren();showError(error);}
+  finally{button.disabled=false;button.textContent='GitHub’dan oku';}
+});

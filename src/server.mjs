@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { evaluateSnapshot } from './engine.mjs';
+import { collectPull, GitHubReadError } from './github.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const routes = new Map([
@@ -13,8 +14,8 @@ const routes = new Map([
   ['/api/snapshot', ['data/growth-os-pr-175.json', 'application/json; charset=utf-8']],
   ['/api/demo', ['data/synthetic-demo.json', 'application/json; charset=utf-8']],
 ]);
-export function makeServer() {
-  return createServer(async (req, res) => {
+export function makeServer({collect=collectPull}={}) {
+  return createServer({requestTimeout:10_000,headersTimeout:10_000},async (req, res) => {
     const send = (status, type, body) => {
       res.writeHead(status, {
         'Content-Type': type, 'Cache-Control': 'no-store',
@@ -24,8 +25,18 @@ export function makeServer() {
       });
       res.end(body);
     };
-    if (req.method !== 'GET') return send(405, 'text/plain', 'Yalnız GET destekleniyor.');
     if (!/^(127\.0\.0\.1|localhost)(:\d+)?$/.test(req.headers.host ?? '')) return send(403, 'text/plain', 'Yalnız yerel erişim.');
+    if(req.url==='/api/github'&&req.method==='POST'){
+      if(req.headers.origin!=='http://'+req.headers.host)return send(403,'application/json',JSON.stringify({error:'İstek kaynağı reddedildi.'}));
+      if((req.headers['content-type']??'').split(';')[0]!=='application/json')return send(415,'application/json',JSON.stringify({error:'JSON gerekli.'}));
+      try{
+        const chunks=[];let size=0;for await(const chunk of req){size+=Buffer.byteLength(chunk);if(size>4096)return send(413,'application/json',JSON.stringify({error:'İstek çok büyük.'}));chunks.push(Buffer.from(chunk));}
+        const body=JSON.parse(Buffer.concat(chunks).toString('utf8'));
+        const result=await collect(body.url,{token:process.env.TASKPROOF_GITHUB_TOKEN??''});
+        return send(200,'application/json; charset=utf-8',JSON.stringify(result));
+      }catch(e){return send(e instanceof GitHubReadError?422:400,'application/json; charset=utf-8',JSON.stringify({error:e instanceof GitHubReadError?e.message:'Geçersiz istek.'}));}
+    }
+    if (req.method !== 'GET') return send(405, 'text/plain', 'Yalnız GET destekleniyor.');
     if (req.url === '/api/report') {
       try {
         const s = JSON.parse(await readFile(resolve(root, 'data/growth-os-pr-175.json'), 'utf8'));
