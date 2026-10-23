@@ -2,6 +2,8 @@
 
 Kullanıcı GEMINI_API_KEY kaydını repository Actions Secret olarak eklediğini bildirdi. Bu kayıt yerel bilgisayara aktarılmadı; değeri okunmadı. Mevcut normal PR/push kontrol workflow'u bu secret'ı kullanmaz.
 
+Normal CI'ın tekrarlayan apt font indirmesini önlemek için Chromium kurulumundan --with-deps çıkarıldı. GitHub ubuntu-24.04 görüntüsü tarayıcı/kütüphane içerir; gerçek yedi UI testi korunur ve eksik kütüphanede kontrol başarısız olur. Bu ayar metadata workflow'una secret taşımaz.
+
 [Gemini metadata access check](https://github.com/gumustasas/task-proof-control/actions/workflows/gemini-access.yml) sayfasında Run workflow → main → Run workflow. Yalnız elle ve main'den çalışır; push/PR/schedule tetikleyicisi yoktur. Secret yalnız metadata adımının env alanına bağlanır. Contents izni salt okumadır, checkout kimlik bilgisi kalıcı saklanmaz. Yeni dependency veya SDK yok.
 
 Komut yalnız sabit gemini-3.1-flash-lite için models.get GET çağrısı yapar. Prompt göndermez, generateContent çağırmaz, yeniden deneme veya fallback yapmaz. Redirect reddedilir; timeout 15 saniye, yanıt sınırı 32 KiB. Hata gövdesi ve credential loglanmaz. Log yalnız status/model/httpStatus/generationRequested/freeTierVerified/remainingQuota ve varsa destek alanını içerir.

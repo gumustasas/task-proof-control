@@ -1,6 +1,7 @@
 # Güncel çalışma durumu — 23 Ekim 2026
 
 ## Son checkpoint — Gemini metadata erişimi
+CI takip düzeltmesi: tekrarlayan Ubuntu apt font indirmesi beklemeleri nedeniyle mevcut Chromium kurulumunda --with-deps kaldırıldı; diğer bütün kontroller ve yedi gerçek UI testi korunur. Yeni head için CI sonucu ayrıca doğrulanmalı; önceki head'in başarısı taşınmaz.
 Kullanıcı GEMINI_API_KEY repository secret eklediğini bildirdi. Değeri okunmadı. T-011: yalnız main workflow_dispatch içinde tek metadata GET yapacak script/workflow hazırlandı. Üretim çağrısı, prompt, retry ve fallback yok. Free Tier/kota doğrulanmadı; T-010 A/B açık. Yerelde 55/55 test, sıfır skip/failure; node --check ve git diff --check başarılı. Kullanım research/seo-comparison/gemini-access.md.
 GitHub connector workflow dispatch sunmuyor ve yerel gh auth doğrulanmadı; canlı kontrolü kullanıcı workflow sayfasından bir kez başlatmalı. Çalıştırılmamış kontrol başarılı sayılmaz. PR/CI/merge sonucu GitHub'da yetkilidir. Uzak başlangıç main a64be9e11440b722b5fe20b4b2dbd108e0ce0cb7; yerel geçmiş bağımsız, force push yok.
 

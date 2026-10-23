@@ -46,7 +46,10 @@ jobs:
       - name: Install fixed browser test tooling
         run: npm install --no-save --package-lock=false --ignore-scripts playwright@1.56.1
       - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+        # ubuntu-24.04 runners already ship browsers and shared libraries.
+        # Fetch the pinned Playwright browser without repeating apt font downloads.
+        # Browser acceptance tests below still fail if a required library is absent.
+        run: npx playwright install chromium
       - name: Browser acceptance checks
         run: npm run test:ui
       - uses: actions/upload-artifact@v4
