@@ -21,10 +21,16 @@ export async function runFirstGeminiTrial({ apiKey, freeTierConfirmed = false, c
     inputTokens: null, outputTokens: null, thinkingTokens: null, totalTokens: null, apiCostUsd: null,
     canClaimModelComparison: false, review: { status: 'pending', reviewer: null, accuracy: null, turkish: null },
   };
-  const clean = (value) => key ? JSON.parse(JSON.stringify(value).replaceAll(key, '[REDACTED]')) : value;
+  const clean = (value) => {
+    if (typeof value === 'string') return key ? value.replaceAll(key, '[REDACTED]') : value;
+    if (Array.isArray(value)) return value.map(clean);
+    if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, clean(v)]));
+    return value;
+  };
   if (!freeTierConfirmed) return { ...base, status: 'free_tier_unconfirmed' };
   if (!key) return { ...base, status: 'secret_missing' };
-  if (!/^[A-Za-z0-9_-]{20,512}$/.test(key)) return { ...base, status: 'secret_format_invalid' };
+  // Accept opaque header-safe credentials; the provider validates their format.
+  if (key.length > 8192 || /[^\x21-\x7E]/.test(key)) return { ...base, status: 'secret_format_invalid' };
   try {
     validateSeoDataset({ schemaVersion: 1, provenance: 'reported', cases: [caseRecord] });
     if (caseRecord.id !== base.caseId) throw new Error('case');

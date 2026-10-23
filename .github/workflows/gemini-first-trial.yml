@@ -11,7 +11,7 @@ permissions:
 jobs:
   trial:
     # Only the first approved main transition; reruns and future pushes skip generation.
-    if: github.event.before == 'ed4e394a11038c332e067140c377662e1e280338' && github.run_attempt == 1
+    if: github.event.before == '2d6277503a0a554fd226d7dbdcb2b5c7a82cbace' && github.run_attempt == 1
     runs-on: ubuntu-24.04
     timeout-minutes: 2
     steps:
