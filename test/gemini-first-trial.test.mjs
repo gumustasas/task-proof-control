@@ -8,7 +8,22 @@ const key = 'unit-test-only-fake-secret-key';
 const dataset = JSON.parse(await readFile(new URL('../research/seo-comparison/reported-cases.json', import.meta.url), 'utf8'));
 const selected = dataset.cases.find(c => c.id === 'R-atik-su');
 const fixture = () => ({ ...structuredClone(selected), review_checks: ['REVIEWER_ONLY_MARKER'] });
-const success = (extra = {}) => Response.json({ candidates: [{ finishReason: 'STOP', content: { parts: [{ text: 'Bulgu: Rapora göre bölüm eksik. Önce sayfayı doğrulayın.' }] } }], ...extra });
+const success = (extra = {}) => Response.json({ candidates: [{ finishReason: 'STOP', content: { parts: [{ text: 'Bulgu: Rapora g�re b�l�m eksik. �nce sayfay� do�rulay�n.' }] } }], ...extra });
+
+test('opaque header-safe credentials are accepted and JSON characters redact safely', async () => {
+  const opaque = 'opaque/+' + 'a'.repeat(600) + '=\\"';
+  let calls = 0;
+  const result = await runFirstGeminiTrial({ apiKey: opaque, freeTierConfirmed: true, caseRecord: fixture(), request: async (_url, init) => {
+    calls++;
+    assert.equal(init.headers['x-goog-api-key'], opaque);
+    return Response.json({ candidates: [{ finishReason: 'STOP', content: { parts: [{ text: opaque }] } }] });
+  } });
+  assert.equal(calls, 1); assert.equal(result.response, '[REDACTED]');
+  assert.equal(result.status, 'completed');
+  for (const invalid of ['line\nbreak', 'a'.repeat(8193)]) {
+    assert.equal((await runFirstGeminiTrial({ apiKey: invalid, freeTierConfirmed: true, caseRecord: fixture(), request: () => assert.fail('invalid header') })).status, 'secret_format_invalid');
+  }
+});
 
 test('first trial requires explicit Free Tier confirmation, key and intended case before network', async () => {
   const request = () => assert.fail('network must not run');
@@ -52,10 +67,10 @@ test('first trial stops on quota and other HTTP errors without retries or body l
 
 test('first trial preserves truncation as incomplete and records only provider token counts', async () => {
   const result = await runFirstGeminiTrial({ apiKey: key, freeTierConfirmed: true, caseRecord: fixture(), request: async () => Response.json({
-    candidates: [{ finishReason: 'MAX_TOKENS', content: { parts: [{ text: 'Yarım yanıt' }] } }],
+    candidates: [{ finishReason: 'MAX_TOKENS', content: { parts: [{ text: 'Yar�m yan�t' }] } }],
     usageMetadata: { promptTokenCount: 120, candidatesTokenCount: 8, totalTokenCount: 128 },
   }) });
-  assert.equal(result.status, 'incomplete'); assert.equal(result.response, 'Yarım yanıt');
+  assert.equal(result.status, 'incomplete'); assert.equal(result.response, 'Yar�m yan�t');
   assert.equal(result.inputTokens, 120); assert.equal(result.outputTokens, 8); assert.equal(result.thinkingTokens, null);
 });
 
