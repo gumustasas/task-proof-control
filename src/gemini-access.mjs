@@ -9,7 +9,7 @@ function result(status, httpStatus = null) {
   return { status, model: GEMINI_MODEL, httpStatus, generationRequested: false, freeTierVerified: false, remainingQuota: null };
 }
 
-async function boundedJson(response) {
+export async function boundedJson(response) {
   if (Number(response.headers.get('content-length')) > MAX_METADATA_BYTES) throw new Error('size');
   const reader = response.body?.getReader();
   if (!reader) throw new Error('body');

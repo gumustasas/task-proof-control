@@ -1,0 +1,35 @@
+name: Gemini first SEO trial (one request)
+
+on:
+  push:
+    branches: [main]
+    paths: [research/seo-comparison/first-trial-request.json]
+
+permissions:
+  contents: read
+
+jobs:
+  trial:
+    # Only the first approved main transition; reruns and future pushes skip generation.
+    if: github.event.before == 'ed4e394a11038c332e067140c377662e1e280338' && github.run_attempt == 1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: One user-approved Free Tier request
+        run: node src/gemini-first-trial.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: gemini-first-seo-trial
+          path: runtime/gemini-first-trial.json
+          if-no-files-found: warn
+          retention-days: 7

@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "requestId": "gemini-first-seo-20261023",
+  "caseId": "R-atik-su",
+  "model": "gemini-3.1-flash-lite",
+  "userConfirmedFreeTier": true,
+  "maximumGenerationRequests": 1,
+  "afterBaseSha": "ed4e394a11038c332e067140c377662e1e280338"
+}

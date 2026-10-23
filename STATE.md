@@ -1,5 +1,10 @@
 # Güncel çalışma durumu — 23 Ekim 2026
 
+## Son checkpoint — ilk Gemini üretim isteği hazırlanıyor
+Kullanıcı Free Tier olduğunu açıkça bildirdi ve ilk SEO denemesini istedi. Metadata kontrolü 39966873913/job 120458917201/ed4e394a11038c332e067140c377662e1e280338 üzerinde HTTP 200 metadata_ok; generateContent desteği görüldü. Bu kontrol üretim yapmadı. Kota bilinmiyor; Free Tier yalnız kullanıcı doğrulaması olarak kaydedildi.
+T-012: R-atik-su rapor bulgusuna ortak istemle tek Gemini POST için kod hazır. 61/61 yerel test, sıfır skip/failure; node --check ve diff kontrolü geçti. Henüz gerçek üretim yanıtı yok. Plan first-trial-plan.md, istek first-trial-request.json. Secret yerelde okunmaz. İstek PR/CI/squash sonrası yalnız başlangıç main geçişi ve ilk attempt'te çalışır; tekrar/fallback yok. Başlangıç main ed4e394a11038c332e067140c377662e1e280338.
+Sonraki iş: exact-head CI ve squash, tek workflow sonucunun okunması; timeout/kotada dur. OpenAI baseline, kör insan puanı ve tam A/B hâlâ açık. Önceki "Gemini metadata henüz çalışmadı" notları bu checkpoint ile tarihsel kaldı.
+
 ## Son checkpoint — Gemini metadata erişimi
 CI takip düzeltmesi: tekrarlayan Ubuntu apt font indirmesi beklemeleri nedeniyle mevcut Chromium kurulumunda --with-deps kaldırıldı; diğer bütün kontroller ve yedi gerçek UI testi korunur. Yeni head için CI sonucu ayrıca doğrulanmalı; önceki head'in başarısı taşınmaz.
 Kullanıcı GEMINI_API_KEY repository secret eklediğini bildirdi. Değeri okunmadı. T-011: yalnız main workflow_dispatch içinde tek metadata GET yapacak script/workflow hazırlandı. Üretim çağrısı, prompt, retry ve fallback yok. Free Tier/kota doğrulanmadı; T-010 A/B açık. Yerelde 55/55 test, sıfır skip/failure; node --check ve git diff --check başarılı. Kullanım research/seo-comparison/gemini-access.md.
