@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-10-23",
+  "provenance": "reported",
+  "notice": "Gerçek Growth OS teslim raporundan türetildi. Ham GSC/sayfa gözlemi veya eski modelle eşleşen baseline değildir; yeni doğrulama yapılmadı.",
+  "cases": [
+    {
+      "id": "R-musluk-secimi",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: en iyi su arıtma musluğu hangisi. Bulgu: Raporda yeni yazı adayı olarak listelenmiş; ilgili sayfa alıntısı sunulmuyor. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-musluk-sokme",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma musluğu nasıl sökülür. Bulgu: Raporda yeni yazı adayı olarak listelenmiş; bağlantı tipi ve ürün modeli sunulmuyor. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-musluk-takma",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma musluğu nasıl takılır. Bulgu: Raporda yeni yazı adayı olarak listelenmiş; montaj talimatı veya teknik çizim sunulmuyor. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-musluk-conta",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma musluğu contası nasıl değiştirilir. Bulgu: Raporda yeni yazı adayı olarak listelenmiş; ürün geometrisi ve conta ölçüsü sunulmuyor. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-daire-montaj",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: daire girişi su arıtma cihazı montajı. Bulgu: Raporda yeni yazı adayı olarak listelenmiş; tesisat basıncı ve cihaz modeli sunulmuyor. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-sebil-baglama",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: arıtmalı su sebili nasıl bağlanır. Bulgu: Raporda yeni yazı adayı olarak listelenmiş; cihazın kullanım kılavuzu sunulmuyor. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-atik-su",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma cihazları ne kadar atık su atar. Bulgu: Rapora göre /su-aritma-cihazi-ariza-nedenleri-ve-cozumleri/ sayfasındaki ilgili bölüm yalnız modele bağlı olduğunu belirtiyor; oran ve karşılaştırma eksik olarak değerlendirilmiş. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-filtre-degisim",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma filtresi nasıl değiştirilir. Bulgu: Raporda /su-aritma-cihazinin-bakimi/ sayfasında adım adım anlatım eksik olarak değerlendirilmiş; tam sayfa gövdesi bu girdide yok. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-tank-dolmuyor",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma tankı neden dolmaz. Bulgu: Raporda /su-aritma-tanklari/ kategori açıklamasının geliştirilmesi önerilmiş; teknik neden ve basınç ölçümü bu girdide yok. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    },
+    {
+      "id": "R-tank-havasi",
+      "provenance": "reported",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: 8 lt tanka ne kadar hava basılır. Bulgu: Raporda /su-aritma-tanklari/ kategori açıklamasının geliştirilmesi önerilmiş; tanka özgü üretici talimatı sunulmuyor. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "review_checks": [
+        "Bulgunun rapordan aktarıldığı ve sayfanın güncel durumunun yeniden doğrulanmadığı belirtilmeli.",
+        "Arama hacmi, fiyat, teknik ölçü veya ürün özelliği uydurulmamalı.",
+        "Öneri, eksik sayfa/model/kılavuz incelemesini gerektiğinde ön koşul yapmalı.",
+        "Somut hedef ve başarı ölçümü önerilmeli; sonuç garantilenmemeli."
+      ]
+    }
+  ]
+}

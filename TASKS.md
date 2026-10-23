@@ -16,7 +16,7 @@
 | Görev | Durum | Bağımlılık | Somut çıktı |
 |---|---|---|---|
 | T-009 Ücretsiz AI araç araştırması ve deney hazırlığı | Hazırlık tamam; yerel 43/43; PR/CI GitHub'da | Yok; güncel kullanıcı önceliği | research/ kısa liste, protokol, 10 sentetik vaka, boş sonuç tablosu |
-| T-010 Gerçek SEO önerisi karşılaştırması | Başlamadı; gerçek girdi/baseline/model kotası eksik | T-009 | İnsan puanı, hız, maliyet ve düzeltme süresi; kazanan henüz yok |
+| T-010 Gerçek SEO önerisi karşılaştırması | Offline aktarım hazır; 49/49 test; canlı A/B erişim/baseline bekliyor | T-009 | 10 reported vaka, Promptfoo test aktarımı, boş ölçüm şablonu; kazanan yok |
 
 Araştırma hattı mevcut TaskProof görevlerini tamamlanmış saymaz ve runtime'a yeni özellik eklemez.
 

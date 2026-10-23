@@ -8,6 +8,7 @@ Yetkili başlangıç dalı `main`; ilk PR ve T-003–T-006 birleştirildi. Aktif
 Kullanıcı ücretsiz AI araçlarını ve yeni program fırsatlarını araştırmayı seçti.
 İlk teslim: [research/README.md](research/README.md); T-009 hazırlığı ve T-010 gerçek deney.
 T-007/T-008 tarihsel açık işlerdir; mevcut talebin önüne geçmez. Model deneyi çalıştırılmadı.
+T-010 offline aktarım uygulandı: `npm.cmd run seo:prepare -- <dataset.json> <yeni-dizin>`. Önce [kullanımı ve engelleri](research/seo-comparison/runner.md) oku; bu komut model çağırmaz. Canlı A/B hâlâ açık.
 
 ## Okuma sırası
 1. AGENTS.md — güven, kodlama ve devir kuralları.
