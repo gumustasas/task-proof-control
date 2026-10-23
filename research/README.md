@@ -12,6 +12,7 @@ Kullanıcı 23 Ekim 2026'da araştırmanın bu repoda, gerçek SEO denemesinin G
 4. [Henüz boş sonuç tablosu](seo-comparison/results.csv)
 5. [Yeni program fırsatları için hipotezler](opportunities.md)
 6. [Çalışan offline aktarım CLI'sı](seo-comparison/runner.md) ve [rapordan türetilmiş 10 vaka](seo-comparison/reported-cases.json)
+7. [GitHub secret ile Gemini metadata erişim kontrolü](seo-comparison/gemini-access.md)
 
 23 Ekim T-010 hazırlığı: veri kümeleriyle aktarım çalıştırıldı, model deneyi yapılmadı. Gemini erişimi/kota ve aynı istemde baseline açık. [Adım planı](seo-comparison/implementation-plan.md).
 
