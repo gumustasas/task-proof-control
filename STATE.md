@@ -1,5 +1,13 @@
 # Güncel çalışma durumu — 23 Ekim 2026
 
+## Son checkpoint — T-010 offline aktarım
+Plan research/seo-comparison/implementation-plan.md içinde koddan önce kaydedildi. src/seo-prepare.mjs ve npm seo:prepare, sentetik/reported veri için Promptfoo test JSON'u, ortak istem, hash manifesti, reviewer-only ve boş A/B şablonu üretir. Yeni değerlendirme/model yürütme motoru değildir. Yeni bağımlılık veya ağ isteği yok.
+Growth OS main db0c79565acd0f9a350aac387a07b9c6f16708b4 içindeki tarihli rapordan 10 reported vaka türetildi. Güncel sayfa/GSC doğrulaması veya eski model çıktısıyla eşleşen baseline değildir. Mevcut judge görevi JSON yeterlilik değerlendirmesidir; yeni öneri istemi farklıdır.
+Yerelde 49/49 test, sıfır skip/failure; sentetik ve reported CLI hazırlıkları 10'ar vaka ile not_run döndü. runtime/ çıktıları gitignore'da. Sonraki adım Gemini ücretsiz erişimi/kotası ve aynı istemde iki sabit model çıktısı; sonra kör insan değerlendirmesi. Ortamda Gemini erişimi yok; kullanılabilir browser aracı bulunmadı. Hiçbir model çağrısı/ücretli işlem yapılmadı. T-010 canlı A/B tamamlanmadı.
+PR/CI/squash sonucu GitHub üzerinde kontrol edilir. Önceki PR #9 squash 272ea021f4e1dc125d1ee053b86026ff1ac1e480; yeni uzak dal bunun üzerinden kurulacak. Yerel geçmiş bağımsız; force push yok.
+
+## Önceki araştırma hazırlığı
+
 Kullanıcı araştırmanın task-proof-control reposunda tutulmasını, Growth OS'in gerçek SEO denemesi bağlamı olmasını seçti. Yeni öncelik T-009/T-010'dur; TaskProof panelini büyütme görevi değildir.
 
 ## Bu teslim

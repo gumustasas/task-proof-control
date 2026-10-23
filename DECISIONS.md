@@ -30,3 +30,7 @@ T-008'in iki gerçek PR'a bağlı ön kontrolü, seçilmiş UI kanıtı ile doğ
 ## ADR-009 — Araştırma bu repoda, uygulama denemesi Growth OS bağlamında
 
 2026-10-23: Kullanıcı araç araştırması ve karşılaştırmanın Task reposunda yapılmasını kabul edip başlatılmasını istedi. research/ dosyaları mevcut TaskProof runtime'ından bağımsızdır. Growth OS'e entegrasyon, yeni panel veya yeni repo gerektirmez. Araçların ücretsiz koşulları resmî kaynak ve tarihle yazılır. Sentetik hazırlık, gerçek kullanıcı deneyi ve üretici iddiası karıştırılmaz. İlk sınırlandırılmış deney SEO bulgusundan Türkçe uygulanabilir öneridir; model/insan zamanı ve maliyet ölçülmeden kazanan seçilmez. Promptfoo aday ölçüm aracıdır; kurulu veya çalışır diye gösterilmez.
+
+## ADR-010 — Yeni model motoru yerine offline test aktarımı
+
+2026-10-23: Promptfoo'nun test biçimine dar bir offline exporter eklendi. Sağlayıcı SDK'sı, model çağrısı, değerlendirme motoru veya panel eklenmez. reported veri rapor kaynağına bağlıdır; fresh/live diye etiketlenmez. Aynı istemde baseline olmadan eski farklı görev çıktısı A/B sonucu sayılmaz. Mevcut dizine yazma reddedilir, ölçülmeyenler null/not_run kalır. Hash'ler kimlik doğrulama değil bayt bağıdır. Gerçek sağlayıcı erişimi olmadığından T-010 canlı deney açık kalır.

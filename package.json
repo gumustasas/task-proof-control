@@ -9,6 +9,7 @@
     "start": "node src/server.mjs",
     "test": "node --test test/*.test.mjs",
     "report": "node src/report.mjs",
-    "test:ui": "node test/ui.mjs"
+    "test:ui": "node test/ui.mjs",
+    "seo:prepare": "node src/seo-prepare.mjs"
   }
 }
