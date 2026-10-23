@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "requestId": "gemini-first-seo-20261023",
+  "status": "completed",
+  "provider": "google",
+  "model": "gemini-3.1-flash-lite",
+  "caseId": "R-atik-su",
+  "provenance": "reported",
+  "accountTier": "free_user_reported",
+  "billingVerified": false,
+  "requestsAttempted": 1,
+  "httpStatus": 200,
+  "response": "**Bulgu:** /su-aritma-cihazi-ariza-nedenleri-ve-cozumleri/ sayfas�nda su ar�tma cihazlar�n�n at�k su oran�na dair bilgi sadece \"modele ba�l�\" ifadesiyle s�n�rl�d�r; somut oranlar veya kar��la�t�rmal� veriler eksiktir.\n\n**�nerilen i�lem:** Sayfaya, farkl� model t�rlerini ve bunlar�n ortalama at�k su oranlar�n� i�eren bilgilendirici bir tablo ekleyin.\n\n**Gerek�e:** Kullan�c�lar \"ne kadar at�k su atar\" sorusuna net yan�t ar�yor. Detayl� veri sunmak, kullan�c� deneyimini iyile�tirerek sayfan�n otoritesini art�rabilir.\n\n**Eksik bilgi:** Arama hacmi, GSC verileri, GA4 etkile�im metrikleri ve mevcut sayfa performans� hakk�nda veri bulunmamaktad�r.\n\n**Ba�ar� nas�l �l��l�r:** G�ncelleme sonras� ilgili anahtar kelimelerdeki s�ralama de�i�imleri ve sayfa i�i kullan�c� etkile�im s�releri izlenerek de�erlendirilebilir.",
+  "wallMs": 1257,
+  "inputTokens": 262,
+  "outputTokens": 234,
+  "thinkingTokens": null,
+  "totalTokens": 496,
+  "apiCostUsd": null,
+  "canClaimModelComparison": false,
+  "review": {
+    "status": "pending",
+    "reviewer": null,
+    "accuracy": null,
+    "turkish": null
+  },
+  "source": {
+    "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+    "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+    "reportDate": "2026-10-23",
+    "section": "�rnek �neriler (ger�ek)"
+  },
+  "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktar�m�d�r; sayfan�n g�ncel durumu yeniden okunmad�. Konu: su ar�tma cihazlar� ne kadar at�k su atar. Bulgu: Rapora g�re /su-aritma-cihazi-ariza-nedenleri-ve-cozumleri/ sayfas�ndaki ilgili b�l�m yaln�z modele ba�l� oldu�unu belirtiyor; oran ve kar��la�t�rma eksik olarak de�erlendirilmi�. Talep kayna�� raporda Google �nerisi olarak belirtiliyor. Bu girdi i�in arama hacmi, GSC, GA4 ve �l��lm�� etki yok. Bu eksik bilgilerle ko�ullu ve uygulanabilir SEO �nerisi yaz.",
+  "promptSha256": "88ff83bcc100f9ad728ebc118367e6e1ecf5298bf35efd516ec5718e35c52cce",
+  "inputSha256": "6eab680105fb7c83998a294e7c23259fe282e2a9eba302e92b883010e5578cb8",
+  "renderedPromptSha256": "cae62b797d5f3e38ede52f8efe4d36f8e21f9d179337e9a2d6116f9cbe5b92aa",
+  "requestSha256": "b134d50af09dd260b58864881fff9d3aec32c6280136b0aedf0dc58ce23add70",
+  "generationConfig": {
+    "candidateCount": 1,
+    "temperature": 0.2,
+    "maxOutputTokens": 768
+  },
+  "observedAt": "2026-10-23T14:26:34.774Z",
+  "finishReason": "STOP",
+  "wordCount": 93,
+  "withinWordLimit": true,
+  "modelVersion": "gemini-3.1-flash-lite"
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "caseId": "R-atik-su",
+  "provenance": "reported",
+  "status": "request_failed_unknown_outcome",
+  "requestsAttempted": 1,
+  "httpStatus": null,
+  "response": null,
+  "wallMs": 70,
+  "inputTokens": null,
+  "outputTokens": null,
+  "totalTokens": null,
+  "apiCostUsd": null,
+  "estimatedCostUsd": null,
+  "review": {
+    "status": "pending"
+  },
+  "promptSha256": "88ff83bcc100f9ad728ebc118367e6e1ecf5298bf35efd516ec5718e35c52cce",
+  "inputSha256": "6eab680105fb7c83998a294e7c23259fe282e2a9eba302e92b883010e5578cb8",
+  "renderedPromptSha256": "cae62b797d5f3e38ede52f8efe4d36f8e21f9d179337e9a2d6116f9cbe5b92aa",
+  "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktar�m�d�r; sayfan�n g�ncel durumu yeniden okunmad�. Konu: su ar�tma cihazlar� ne kadar at�k su atar. Bulgu: Rapora g�re /su-aritma-cihazi-ariza-nedenleri-ve-cozumleri/ sayfas�ndaki ilgili b�l�m yaln�z modele ba�l� oldu�unu belirtiyor; oran ve kar��la�t�rma eksik olarak de�erlendirilmi�. Talep kayna�� raporda Google �nerisi olarak belirtiliyor. Bu girdi i�in arama hacmi, GSC, GA4 ve �l��lm�� etki yok. Bu eksik bilgilerle ko�ullu ve uygulanabilir SEO �nerisi yaz.",
+  "source": {
+    "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+    "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+    "reportDate": "2026-10-23",
+    "section": "�rnek �neriler (ger�ek)"
+  },
+  "requestSha256": "6ed9d8f226bfb23331e30f849cfd15996ed164f83402a21532f78b3153aa6c22",
+  "observedAt": "2026-10-23T14:40:44.964Z",
+  "listPriceUpperBoundUsd": 0.00067725,
+  "inputTokenUpperBound": 1443,
+  "pricing": {
+    "inputPerMillionUsd": 0.15,
+    "outputPerMillionUsd": 0.6,
+    "checkedAt": "2026-10-23",
+    "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+    "billingVerified": false
+  },
+  "mode": "local_api_single_sample"
+}
