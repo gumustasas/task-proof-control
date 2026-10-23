@@ -34,3 +34,7 @@ T-008'in iki gerçek PR'a bağlı ön kontrolü, seçilmiş UI kanıtı ile doğ
 ## ADR-010 — Yeni model motoru yerine offline test aktarımı
 
 2026-10-23: Promptfoo'nun test biçimine dar bir offline exporter eklendi. Sağlayıcı SDK'sı, model çağrısı, değerlendirme motoru veya panel eklenmez. reported veri rapor kaynağına bağlıdır; fresh/live diye etiketlenmez. Aynı istemde baseline olmadan eski farklı görev çıktısı A/B sonucu sayılmaz. Mevcut dizine yazma reddedilir, ölçülmeyenler null/not_run kalır. Hash'ler kimlik doğrulama değil bayt bağıdır. Gerçek sağlayıcı erişimi olmadığından T-010 canlı deney açık kalır.
+
+## ADR-011 — Metadata erişimini üretim/kotadan ayır
+
+2026-10-23: Kullanıcı GitHub Actions secret yolunu seçti ve eklediğini bildirdi. Anahtar yalnız main'den elle başlatılan ayrı workflow'un tek metadata adımında kullanılır; normal PR/push testlerine verilmez. Sabit Google URL'ye tek GET yapılır; üretim, prompt veya ücretli fallback yoktur. Metadata başarısı ücretsiz katman/kalan kota/üretim yetkisi değildir. Workflow dispatch aracı yoksa erişim hazırlandı diye canlı test yapıldığı söylenmez; kullanıcıya tek başlatma adımı verilir.

@@ -1,5 +1,9 @@
 # Güncel çalışma durumu — 23 Ekim 2026
 
+## Son checkpoint — Gemini metadata erişimi
+Kullanıcı GEMINI_API_KEY repository secret eklediğini bildirdi. Değeri okunmadı. T-011: yalnız main workflow_dispatch içinde tek metadata GET yapacak script/workflow hazırlandı. Üretim çağrısı, prompt, retry ve fallback yok. Free Tier/kota doğrulanmadı; T-010 A/B açık. Yerelde 55/55 test, sıfır skip/failure; node --check ve git diff --check başarılı. Kullanım research/seo-comparison/gemini-access.md.
+GitHub connector workflow dispatch sunmuyor ve yerel gh auth doğrulanmadı; canlı kontrolü kullanıcı workflow sayfasından bir kez başlatmalı. Çalıştırılmamış kontrol başarılı sayılmaz. PR/CI/merge sonucu GitHub'da yetkilidir. Uzak başlangıç main a64be9e11440b722b5fe20b4b2dbd108e0ce0cb7; yerel geçmiş bağımsız, force push yok.
+
 ## Son checkpoint — T-010 offline aktarım
 Plan research/seo-comparison/implementation-plan.md içinde koddan önce kaydedildi. src/seo-prepare.mjs ve npm seo:prepare, sentetik/reported veri için Promptfoo test JSON'u, ortak istem, hash manifesti, reviewer-only ve boş A/B şablonu üretir. Yeni değerlendirme/model yürütme motoru değildir. Yeni bağımlılık veya ağ isteği yok.
 Growth OS main db0c79565acd0f9a350aac387a07b9c6f16708b4 içindeki tarihli rapordan 10 reported vaka türetildi. Güncel sayfa/GSC doğrulaması veya eski model çıktısıyla eşleşen baseline değildir. Mevcut judge görevi JSON yeterlilik değerlendirmesidir; yeni öneri istemi farklıdır.
