@@ -11,6 +11,15 @@
 | T-007 Preview davranış kontrolü | Admin mevcut; origin düzeltmesi yayında; oturumlu tekrar test açık | T-005, T-006 | Source #176, 762/762; güncel preview READY; gerçek start/continue doğrulanmalı |
 | T-008 Gerçek fayda deneyi | Ön ölçüm hazır; insan karşılaştırması açık | T-005; UI şartları için T-007 | 3 seçilmiş olumlu kriter, 5 kanıt eksikliği; zaman kazancı ölçülmedi |
 
+## Kullanıcının güncel araştırma hattı — 23 Ekim 2026
+
+| Görev | Durum | Bağımlılık | Somut çıktı |
+|---|---|---|---|
+| T-009 Ücretsiz AI araç araştırması ve deney hazırlığı | Hazırlık tamam; yerel 43/43; PR/CI GitHub'da | Yok; güncel kullanıcı önceliği | research/ kısa liste, protokol, 10 sentetik vaka, boş sonuç tablosu |
+| T-010 Gerçek SEO önerisi karşılaştırması | Başlamadı; gerçek girdi/baseline/model kotası eksik | T-009 | İnsan puanı, hız, maliyet ve düzeltme süresi; kazanan henüz yok |
+
+Araştırma hattı mevcut TaskProof görevlerini tamamlanmış saymaz ve runtime'a yeni özellik eklemez.
+
 ```mermaid
 flowchart TD
   A["T-001 Kanıt motoru"] --> B["T-002 Panel"]

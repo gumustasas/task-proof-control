@@ -6,6 +6,13 @@ Başlangıç sürümü `main` üzerinde kullanılabilir. Aktif geliştirme Codex
 
 Bir yazılım görevinin kabul şartlarını, aynı commit'e ait kanıtlarla gösteren bağımsız yerel prototip.
 
+## Güncel çalışma: ücretsiz AI araçları ve fırsatlar
+
+23 Ekim'deki kullanıcı kararıyla [araştırma bölümü](research/README.md) bu repoya eklendi.
+Hedef: zahmetli işleri uygun araçlarla hızlandırmak ve gerçek bir ürün boşluğu varsa kaydetmek.
+İlk pilot, mevcut OpenAI modeli ile ücretsiz Gemini adayının Türkçe SEO önerisinde karşılaştırılmasıdır.
+Henüz model deneyi veya zaman kazancı sonucu yok. TaskProof paneli ayrı bir doğrulama prototipi olarak kalır; araştırma yeni panel gerektirmez.
+
 ## Başlatma
 
 Node.js 22 veya üstü gerekir. Harici npm bağımlılığı ve API anahtarı gerekmez.

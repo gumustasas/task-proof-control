@@ -3,6 +3,12 @@
 Repo: https://github.com/gumustasas/task-proof-control
 Yetkili başlangıç dalı `main`; ilk PR ve T-003–T-006 birleştirildi. Aktif görev ve açık ön koşullar STATE.md / TASKS.md içindedir. Geliştirmeye Codex ile devam ediliyor; devir belgeleri gelecekteki devamlılık içindir.
 
+## Güncel öncelik — 23 Ekim 2026
+
+Kullanıcı ücretsiz AI araçlarını ve yeni program fırsatlarını araştırmayı seçti.
+İlk teslim: [research/README.md](research/README.md); T-009 hazırlığı ve T-010 gerçek deney.
+T-007/T-008 tarihsel açık işlerdir; mevcut talebin önüne geçmez. Model deneyi çalıştırılmadı.
+
 ## Okuma sırası
 1. AGENTS.md — güven, kodlama ve devir kuralları.
 2. STATE.md — bu oturumun gerçek son durumu ve engeller.

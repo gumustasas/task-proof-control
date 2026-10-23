@@ -26,3 +26,7 @@ T-006 ayrı CLI ve geçici Linux Docker host kullanır. Kaynak kod panel sunucus
 
 ## ADR-008 — Ön ölçüm ve gerçek faydayı ayır
 T-008'in iki gerçek PR'a bağlı ön kontrolü, seçilmiş UI kanıtı ile doğrudan kanıt eksikliğini ayırır. İnsan baseline, bilinen kod hatası ve kaynak preview doğrulaması eksikken tam fayda deneyi tamamlandı sayılmaz. Motorun yerel milisaniyesi insan zaman tasarrufu değildir. Ölçülmeyen değerler null kalır.
+
+## ADR-009 — Araştırma bu repoda, uygulama denemesi Growth OS bağlamında
+
+2026-10-23: Kullanıcı araç araştırması ve karşılaştırmanın Task reposunda yapılmasını kabul edip başlatılmasını istedi. research/ dosyaları mevcut TaskProof runtime'ından bağımsızdır. Growth OS'e entegrasyon, yeni panel veya yeni repo gerektirmez. Araçların ücretsiz koşulları resmî kaynak ve tarihle yazılır. Sentetik hazırlık, gerçek kullanıcı deneyi ve üretici iddiası karıştırılmaz. İlk sınırlandırılmış deney SEO bulgusundan Türkçe uygulanabilir öneridir; model/insan zamanı ve maliyet ölçülmeden kazanan seçilmez. Promptfoo aday ölçüm aracıdır; kurulu veya çalışır diye gösterilmez.

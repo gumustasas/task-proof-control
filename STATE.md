@@ -1,3 +1,25 @@
+# Güncel çalışma durumu — 23 Ekim 2026
+
+Kullanıcı araştırmanın task-proof-control reposunda tutulmasını, Growth OS'in gerçek SEO denemesi bağlamı olmasını seçti. Yeni öncelik T-009/T-010'dur; TaskProof panelini büyütme görevi değildir.
+
+## Bu teslim
+- Resmî kaynaklarla ücretsiz AI araçları kısa listesi: research/2026-10-23-free-ai-tools.md.
+- SEO önerisi için ortak istem, kör puanlama, süre/maliyet ve insan düzeltme ölçümü: research/seo-comparison/protocol.md.
+- Açıkça sentetik 10 hazırlık vakası; sonuç CSV'si boş. Model çalıştırılmadı.
+- Kullanılacak araç ile yeni ürün hipotezi ayrı kaydedildi: research/opportunities.md.
+- Yeni servis, dependency, credential, model çağrısı, panel veya Growth OS değişikliği yok.
+- Yerel checkout uzak main'den eski checkpoint geçmişine sahipti. Güncel uzak main 3b60513c2eb4c3feaffddecae6456606a43b9ef8 üzerinden yeni dal açılacak; eski yerel geçmiş force-push edilmeyecek.
+
+## Açık madde ve sıradaki iş
+T-010: paylaşılması uygun gerçek SEO girdileri, eşleşen baseline, güncel OpenAI model/istem kaydı ve ücretsiz adayın hesap kotası gerekir. Bunlar hazırlanmadan gerçek model kıyası veya zaman kazancı iddiası yok.
+T-007/T-008 açık kalır; bu araştırma onları kapatmaz.
+Bu oturumun GitHub okumasında Growth OS #175 ve #177–180 artık main'e birleştirilmişti; aşağıdaki "#175 açık/source main değişmedi" dönem notları bu nedenle güncel repo durumu değildir. Kullanıcının diğer çalışmalarını bu araştırmaya mal etme.
+Yerelde npm.cmd test: 43/43 başarılı, sıfır skip/failure. JSON: 10 benzersiz sentetik vaka; CSV: yalnız başlık. git diff --check temiz. Runtime/UI değişmedi. Uzak PR/CI/merge sonucu GitHub'dan doğrulanır.
+
+---
+
+# Önceki TaskProof kayıtları — tarihsel
+
 # Çalışma durumu
 
 22 Ekim 2026. Yetkili repo: https://github.com/gumustasas/task-proof-control
