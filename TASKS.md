@@ -17,7 +17,8 @@
 |---|---|---|---|
 | T-009 Ücretsiz AI araç araştırması ve deney hazırlığı | Hazırlık tamam; yerel 43/43; PR/CI GitHub'da | Yok; güncel kullanıcı önceliği | research/ kısa liste, protokol, 10 sentetik vaka, boş sonuç tablosu |
 | T-010 Gerçek SEO önerisi karşılaştırması | Offline aktarım hazır; 49/49 test; canlı A/B erişim/baseline bekliyor | T-009 | 10 reported vaka, Promptfoo test aktarımı, boş ölçüm şablonu; kazanan yok |
-| T-011 Gemini metadata erişimi | Kod hazır; canlı workflow henüz çalışmadı | GEMINI_API_KEY repository secret | Yalnız main'de manuel tek metadata GET; üretim/kota doğrulaması değil |
+| T-011 Gemini metadata erişimi | Tamamlandı; run 39966873913 HTTP 200 | GEMINI_API_KEY repository secret | metadata_ok; üretim/kota doğrulaması değil |
+| T-012 İlk tek vakalık Gemini denemesi | Kod hazır; 61/61; tek üretim workflow'u bekleniyor | T-011; kullanıcının Free Tier doğrulaması | R-atik-su; tek istek; henüz yanıt/karşılaştırma sonucu yok |
 
 Araştırma hattı mevcut TaskProof görevlerini tamamlanmış saymaz ve runtime'a yeni özellik eklemez.
 

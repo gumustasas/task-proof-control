@@ -38,3 +38,7 @@ T-008'in iki gerçek PR'a bağlı ön kontrolü, seçilmiş UI kanıtı ile doğ
 ## ADR-011 — Metadata erişimini üretim/kotadan ayır
 
 2026-10-23: Kullanıcı GitHub Actions secret yolunu seçti ve eklediğini bildirdi. Anahtar yalnız main'den elle başlatılan ayrı workflow'un tek metadata adımında kullanılır; normal PR/push testlerine verilmez. Sabit Google URL'ye tek GET yapılır; üretim, prompt veya ücretli fallback yoktur. Metadata başarısı ücretsiz katman/kalan kota/üretim yetkisi değildir. Workflow dispatch aracı yoksa erişim hazırlandı diye canlı test yapıldığı söylenmez; kullanıcıya tek başlatma adımı verilir.
+
+## ADR-012 — Açık kullanıcı isteğiyle yalnız bir Free Tier üretim denemesi
+
+2026-10-23: Kullanıcı Free Tier olduğunu doğrulayıp denemeyi istedi. GitHub connector dispatch sağlamadığından bir request dosyasının ilk main geçişine bağlı tek seferlik push workflow'u seçildi. Tam event.before ve run_attempt=1 koşulları, PR ve gelecekteki push/rerun üretimini engeller. Yalnız R-atik-su, sabit model, bir POST/aday, output/time/body limitleri; retry/fallback yok. Başarı kalite veya tam A/B sonucu değildir. Billing/kota ölçülmediği için maliyet bilinmiyorsa null. Yeni model isteği için yeni kullanıcı görevi gerekir.
