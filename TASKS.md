@@ -1,37 +1,41 @@
-# Görev bağlantıları
+Current checkpoint: T-013 one approved OpenAI baseline attempted; transport failed with unknown provider outcome. Comparison blocked, no automatic retry. Full observations and review in research/seo-comparison/first-pair-review.md.
 
-| Görev | Durum | Bağımlılık | Somut çıktı |
+Current checkpoint: T-012 first Gemini one-case generation completed in run 39969638630 (one request). Assistant quality review needs revision. Matched baseline and blinded human evaluation remain open. Result and review are in PR #13; no more generation requests in this task.
+
+# G�rev ba�lant�lar�
+
+| G�rev | Durum | Ba��ml�l�k | Somut ��kt� |
 |---|---|---|---|
-| T-001 Kanıt sözleşmesi ve karar motoru | Tamamlandı | Yok | engine + testler + evidence-contract |
-| T-002 Yerel panel ve örnek kayıt | Tamamlandı | T-001 | gerçek snapshot + sentetik demo + import/export |
-| T-003 Doğrulama ve taşınabilir devir | Tamamlandı — PR #2 squash | T-001, T-002 | GitHub'da 16/16 + 6 Chromium senaryosu; run 39803038748 |
-| T-004 GitHub salt okuma adapteri | Tamamlandı - PR #3 squash | T-003 | 27/27 test, 7 Chromium, canlı salt okuma; run 39803768215 |
-| T-005 Senaryo kanıtı alma ve eşleme | Tamamlandı - PR #4 squash | T-004 | 38/38 test, 7 Chromium, run 39804912250; operatör importu |
-| T-006 İzole runner tasarımı ve uygulaması | Tamamlandı - PR #5 squash | T-005 | 42/42, 7 Chromium ve gerçek Docker limit denemeleri; run 39806257000 |
-| T-007 Preview davranış kontrolü | Admin mevcut; origin düzeltmesi yayında; oturumlu tekrar test açık | T-005, T-006 | Source #176, 762/762; güncel preview READY; gerçek start/continue doğrulanmalı |
-| T-008 Gerçek fayda deneyi | Ön ölçüm hazır; insan karşılaştırması açık | T-005; UI şartları için T-007 | 3 seçilmiş olumlu kriter, 5 kanıt eksikliği; zaman kazancı ölçülmedi |
+| T-001 Kan�t s�zle�mesi ve karar motoru | Tamamland� | Yok | engine + testler + evidence-contract |
+| T-002 Yerel panel ve �rnek kay�t | Tamamland� | T-001 | ger�ek snapshot + sentetik demo + import/export |
+| T-003 Do�rulama ve ta��nabilir devir | Tamamland� - PR #2 squash | T-001, T-002 | GitHub'da 16/16 + 6 Chromium senaryosu; run 39803038748 |
+| T-004 GitHub salt okuma adapteri | Tamamland� - PR #3 squash | T-003 | 27/27 test, 7 Chromium, canl� salt okuma; run 39803768215 |
+| T-005 Senaryo kan�t� alma ve e�leme | Tamamland� - PR #4 squash | T-004 | 38/38 test, 7 Chromium, run 39804912250; operat�r importu |
+| T-006 �zole runner tasar�m� ve uygulamas� | Tamamland� - PR #5 squash | T-005 | 42/42, 7 Chromium ve ger�ek Docker limit denemeleri; run 39806257000 |
+| T-007 Preview davran�� kontrol� | Admin mevcut; origin d�zeltmesi yay�nda; oturumlu tekrar test a��k | T-005, T-006 | Source #176, 762/762; g�ncel preview READY; ger�ek start/continue do�rulanmal� |
+| T-008 Ger�ek fayda deneyi | �n �l��m haz�r; insan kar��la�t�rmas� a��k | T-005; UI �artlar� i�in T-007 | 3 se�ilmi� olumlu kriter, 5 kan�t eksikli�i; zaman kazanc� �l��lmedi |
 
-## Kullanıcının güncel araştırma hattı — 23 Ekim 2026
+## Kullan�c�n�n g�ncel ara�t�rma hatt� - 23 Ekim 2026
 
-| Görev | Durum | Bağımlılık | Somut çıktı |
+| G�rev | Durum | Ba��ml�l�k | Somut ��kt� |
 |---|---|---|---|
-| T-009 Ücretsiz AI araç araştırması ve deney hazırlığı | Hazırlık tamam; yerel 43/43; PR/CI GitHub'da | Yok; güncel kullanıcı önceliği | research/ kısa liste, protokol, 10 sentetik vaka, boş sonuç tablosu |
-| T-010 Gerçek SEO önerisi karşılaştırması | Offline aktarım hazır; 49/49 test; canlı A/B erişim/baseline bekliyor | T-009 | 10 reported vaka, Promptfoo test aktarımı, boş ölçüm şablonu; kazanan yok |
-| T-011 Gemini metadata erişimi | Tamamlandı; run 39966873913 HTTP 200 | GEMINI_API_KEY repository secret | metadata_ok; üretim/kota doğrulaması değil |
-| T-012 İlk tek vakalık Gemini denemesi | Kod hazır; 61/61; tek üretim workflow'u bekleniyor | T-011; kullanıcının Free Tier doğrulaması | R-atik-su; tek istek; henüz yanıt/karşılaştırma sonucu yok |
+| T-009 �cretsiz AI ara� ara�t�rmas� ve deney haz�rl��� | Haz�rl�k tamam; yerel 43/43; PR/CI GitHub'da | Yok; g�ncel kullan�c� �nceli�i | research/ k�sa liste, protokol, 10 sentetik vaka, bo� sonu� tablosu |
+| T-010 Ger�ek SEO �nerisi kar��la�t�rmas� | Offline aktar�m haz�r; 49/49 test; canl� A/B eri�im/baseline bekliyor | T-009 | 10 reported vaka, Promptfoo test aktar�m�, bo� �l��m �ablonu; kazanan yok |
+| T-011 Gemini metadata eri�imi | Tamamland�; run 39966873913 HTTP 200 | GEMINI_API_KEY repository secret | metadata_ok; �retim/kota do�rulamas� de�il |
+| T-012 First Gemini SEO request | Completed: run 39969638630; quality needs revision | T-011; user Free Tier confirmation | 1257ms, 496 tokens; no matched baseline |
 
-Araştırma hattı mevcut TaskProof görevlerini tamamlanmış saymaz ve runtime'a yeni özellik eklemez.
+Ara�t�rma hatt� mevcut TaskProof g�revlerini tamamlanm�� saymaz ve runtime'a yeni �zellik eklemez.
 
 ```mermaid
 flowchart TD
-  A["T-001 Kanıt motoru"] --> B["T-002 Panel"]
+  A["T-001 Kan�t motoru"] --> B["T-002 Panel"]
   B --> C["T-003 Devir"]
   C --> D["T-004 GitHub adapteri"]
-  D --> E["T-005 Senaryo kanıtı"]
-  E --> F["T-006 İzole runner"]
-  F --> G["T-007 Preview kontrolü"]
-  E --> H["T-008 Fayda ölçümü"]
+  D --> E["T-005 Senaryo kan�t�"]
+  E --> F["T-006 �zole runner"]
+  F --> G["T-007 Preview kontrol�"]
+  E --> H["T-008 Fayda �l��m�"]
   G --> H
 ```
 
-Bir görevde çalışma bitince durum, test ve açık madde ilgili görev dosyası ile STATE.md'de birlikte güncellenir.
+Bir g�revde �al��ma bitince durum, test ve a��k madde ilgili g�rev dosyas� ile STATE.md'de birlikte g�ncellenir.
