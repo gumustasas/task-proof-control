@@ -1,0 +1,1 @@
+run_id,case_id,provenance,blind_label,provider,model_id,mode,attempt,prompt_sha256,input_sha256,observed_at,status,turkish_0_5,accuracy_0_5,actionability_0_5,critical_error,wall_ms,edit_seconds,setup_minutes,input_tokens,output_tokens,api_cost_usd,plan_cost_usd,reviewer,response_path,notes
