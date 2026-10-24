@@ -1,3 +1,9 @@
+# 2026-10-24 — T-016, explicit API credit-added confirmation
+
+User explicitly confirmed API credit addition after the precise credit_balance_exhausted error. T-015 trial40094645100/job120874237592 was HTTP429/insufficient_quota/credit_balance_exhausted, no text or usage. PR #16 squash f861e84a2c7c851b85cfb8b5b09146884de64d2c, exact-head CI40094561706/job120873993862 passed69 tests,7UI and Docker. Original result is in PR #16 body; older pending notes below are historical.
+
+T-016 plan tasks/T-016.md: same code/key/prompt/input and list-price budget, one new hosted request from exactly f861e84a2c7c851b85cfb8b5b09146884de64d2c, first attempt only. No retries/fallback. Provider result pending; do not claim successful billing or completed comparison before reading logs.
+
 # 2026-10-24 — T-015, one new baseline after user account update
 
 PR #15 was merged as c4cbc22d7d505965895064c672ff354ff8c91244. Its exact-head CI40091323387/job120864424313 passed 67 tests,7UI and Docker. Hosted trial40091399254/job120864644999 returned HTTP429 after7061ms, with no generated text or usage. Old quota_error status is generic; cause unverified. User subsequently replied 'Ekledim' to Billing/Limits guidance. One new request is authorized; account balance is not independently verified.

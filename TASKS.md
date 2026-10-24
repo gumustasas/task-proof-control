@@ -1,3 +1,5 @@
+Current task T-016: user explicitly added credit; one new bounded hosted baseline authorized. T-015 completed with credit_balance_exhausted, not a generated response. Same prompt/input, no automatic retries. See tasks/T-016.md.
+
 Current task T-015: user account update followed by one authorized baseline request; safe code-level 429 diagnostics and no automatic retry. Plan tasks/T-015.md. Prior T-014 HTTP429 remains evidence; comparison not completed.
 
 Current task T-014: one newly authorized hosted OpenAI baseline using the user-added repository secret. Same shared prompt and input, ~USD0.001 list-price preflight limit, no retries. Actual result pending; prior failed request remains evidence. See tasks/T-014.md.
