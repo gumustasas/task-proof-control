@@ -11,6 +11,9 @@ const ENDPOINT = 'https://api.openai.com/v1/responses';
 const sha = value => createHash('sha256').update(value).digest('hex');
 const count = v => Number.isSafeInteger(v) && v >= 0 ? v : null;
 const estimate = (input, output) => (input * 0.15 + output * 0.60) / 1e6;
+const BILLING_CODES = new Set(['insufficient_quota', 'credit_balance_exhausted', 'organization_spend_limit_exceeded', 'project_spend_limit_exceeded', 'organization_usage_limit_exceeded', 'usage_limit_exceeded']);
+const RATE_CODES = new Set(['rate_limit_exceeded', 'slow_down']);
+const ERROR_TYPES = new Set(['insufficient_quota', 'rate_limit_error', 'invalid_request_error', 'authentication_error']);
 
 export async function runSeoBaseline({ approved = false, apiKey, caseRecord, reference, request = fetch, timeoutMs = 45000 } = {}) {
   const key = typeof apiKey === 'string' ? apiKey.trim() : '';
@@ -39,8 +42,18 @@ export async function runSeoBaseline({ approved = false, apiKey, caseRecord, ref
     const response = await request(ENDPOINT, { method: 'POST', headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' }, body, redirect: 'error', signal: controller.signal });
     base.httpStatus = response.status;
     if (!response.ok) {
-      await response.body?.cancel().catch(() => {});
-      return clean({ ...base, status: response.status === 429 ? 'quota_error' : 'http_error', wallMs: Math.round(performance.now() - started) });
+      let errorCode = null, errorType = null;
+      try {
+        const payload = await boundedJson(response);
+        const code = payload?.error?.code, type = payload?.error?.type;
+        if (BILLING_CODES.has(code) || RATE_CODES.has(code)) errorCode = code;
+        if (ERROR_TYPES.has(type)) errorType = type;
+      } catch { /* Never retain arbitrary error bodies or thrown transport text. */ }
+      const status = response.status !== 429 ? 'http_error'
+        : BILLING_CODES.has(errorCode) || errorType === 'insufficient_quota' ? 'quota_error'
+        : RATE_CODES.has(errorCode) || errorType === 'rate_limit_error' ? 'rate_limit_error'
+        : 'rate_or_quota_error';
+      return clean({ ...base, status, errorCode, errorType, wallMs: Math.round(performance.now() - started) });
     }
     const data = await boundedJson(response);
     const text = (Array.isArray(data.output) ? data.output : []).filter(item => item.type === 'message' && item.role === 'assistant').flatMap(item => Array.isArray(item.content) ? item.content : []).filter(p => p.type === 'output_text' && typeof p.text === 'string').map(p => p.text).join('').trim();
@@ -60,6 +73,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
     await mkdir('runtime', { recursive: true });
     await writeFile('runtime/openai-seo-baseline.attempt.lock', 'one approved attempt reserved\n', { flag: 'wx' });
     const result = await runSeoBaseline({ approved: true, apiKey: process.env.OPENAI_API_KEY, caseRecord: dataset.cases.find(c => c.id === 'R-atik-su'), reference });
+    result.mode = process.env.GITHUB_ACTIONS === 'true' ? 'github_actions_api_single_sample' : 'local_api_single_sample';
     await writeFile('runtime/openai-seo-baseline.json', JSON.stringify(result, null, 2) + '\n', { flag: 'wx' });
     process.stdout.write(JSON.stringify(result) + '\n');
     if (result.status !== 'completed') process.exitCode = 1;

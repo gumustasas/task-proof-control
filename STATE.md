@@ -1,3 +1,9 @@
+# 2026-10-24 — T-015, one new baseline after user account update
+
+PR #15 was merged as c4cbc22d7d505965895064c672ff354ff8c91244. Its exact-head CI40091323387/job120864424313 passed 67 tests,7UI and Docker. Hosted trial40091399254/job120864644999 returned HTTP429 after7061ms, with no generated text or usage. Old quota_error status is generic; cause unverified. User subsequently replied 'Ekledim' to Billing/Limits guidance. One new request is authorized; account balance is not independently verified.
+
+T-015 plan was written before code: bounded allowlisted diagnostic codes/types, corrected runner metadata, same prompt/input/model/limits. Seven targeted local tests pass. Workflow gates a single new main transition from c4cbc22d7d505965895064c672ff354ff8c91244 and first attempt only. No generation yet in this new task; exact-head CI, squash and result pending. No automatic retries or budget increase. Historical pending notes below are superseded.
+
 # 2026-10-24 — New repository key; one hosted baseline authorized
 
 User confirmed a new OPENAI_API_KEY Actions secret. T-014 plan: actions-baseline-plan.md. Existing CLI unchanged, same reference hashes verified locally. Previous local failure retained. One GitHub push transition and run_attempt=1 only; no retries, dispatch or secret extraction. PR/CI/squash and actual result pending. PR #14 previously merged as 6772a0e8dfb9ca290655d73e2ece296f95c6a573 after 66 tests and 7 UI checks; old pending notes below are historical.

@@ -64,3 +64,31 @@ test('baseline timeout records unknown provider outcome with one attempt', async
   assert.equal(calls, 1); assert.equal(result.status, 'timeout_unknown_outcome');
   assert.ok(!JSON.stringify(result).includes('fake-unit-test-key'));
 });
+
+test('429 diagnostics distinguish billing from rate limits using only allowlisted codes', async () => {
+  const cases = [
+    ['credit_balance_exhausted', 'insufficient_quota', 'quota_error'],
+    ['insufficient_quota', 'insufficient_quota', 'quota_error'],
+    ['project_spend_limit_exceeded', 'invalid_request_error', 'quota_error'],
+    ['rate_limit_exceeded', 'rate_limit_error', 'rate_limit_error'],
+    ['slow_down', 'rate_limit_error', 'rate_limit_error'],
+    ['fake-unit-test-key', 'fake-unit-test-key', 'rate_or_quota_error'],
+  ];
+  for (const [code, type, expected] of cases) {
+    let calls = 0;
+    const result = await runSeoBaseline({ ...args(), request: async () => { calls++; return Response.json({ error: { code, type, message: 'fake-unit-test-key' } }, { status: 429 }); } });
+    assert.equal(calls, 1); assert.equal(result.status, expected);
+    assert.ok(!JSON.stringify(result).includes('fake-unit-test-key'));
+    assert.equal(result.errorCode, code === 'fake-unit-test-key' ? null : code);
+  }
+});
+
+test('non-JSON and oversized 429 bodies remain ambiguous and never retry', async () => {
+  for (const body of ['fake-unit-test-key', 'x'.repeat(40000)]) {
+    let calls = 0;
+    const result = await runSeoBaseline({ ...args(), request: async () => { calls++; return new Response(body, { status: 429 }); } });
+    assert.equal(calls, 1); assert.equal(result.status, 'rate_or_quota_error');
+    assert.equal(result.errorCode, null); assert.equal(result.errorType, null);
+    assert.ok(!JSON.stringify(result).includes('fake-unit-test-key'));
+  }
+});

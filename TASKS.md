@@ -1,3 +1,5 @@
+Current task T-015: user account update followed by one authorized baseline request; safe code-level 429 diagnostics and no automatic retry. Plan tasks/T-015.md. Prior T-014 HTTP429 remains evidence; comparison not completed.
+
 Current task T-014: one newly authorized hosted OpenAI baseline using the user-added repository secret. Same shared prompt and input, ~USD0.001 list-price preflight limit, no retries. Actual result pending; prior failed request remains evidence. See tasks/T-014.md.
 
 Current checkpoint: T-013 one approved OpenAI baseline attempted; transport failed with unknown provider outcome. Comparison blocked, no automatic retry. Full observations and review in research/seo-comparison/first-pair-review.md.
