@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   trial:
-    if: github.event.before == 'c4cbc22d7d505965895064c672ff354ff8c91244' && github.run_attempt == 1
+    if: github.event.before == 'f861e84a2c7c851b85cfb8b5b09146884de64d2c' && github.run_attempt == 1
     runs-on: ubuntu-24.04
     timeout-minutes: 2
     steps:
