@@ -1,0 +1,34 @@
+name: OpenAI matched SEO trial (one request)
+
+on:
+  push:
+    branches: [main]
+    paths: [research/seo-comparison/actions-baseline-request.json]
+
+permissions:
+  contents: read
+
+jobs:
+  trial:
+    if: github.event.before == '6772a0e8dfb9ca290655d73e2ece296f95c6a573' && github.run_attempt == 1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: One user-approved baseline request
+        run: node src/openai-seo-baseline.mjs --approved-one-request
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: openai-matched-seo-trial
+          path: runtime/openai-seo-baseline.json
+          if-no-files-found: warn
+          retention-days: 7

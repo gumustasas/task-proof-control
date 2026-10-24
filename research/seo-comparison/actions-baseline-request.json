@@ -1,0 +1,9 @@
+{
+  "requestId": "openai-seo-github-20261024",
+  "caseId": "R-atik-su",
+  "model": "gpt-4o-mini",
+  "maximumRequests": 1,
+  "afterBaseSha": "6772a0e8dfb9ca290655d73e2ece296f95c6a573",
+  "keySource": "repository_actions_secret",
+  "approximateBudgetUsd": 0.001
+}

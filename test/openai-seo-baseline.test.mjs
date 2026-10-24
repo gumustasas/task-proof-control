@@ -7,6 +7,14 @@ import { SEO_PROMPT } from '../src/seo-prepare.mjs';
 
 const dataset = JSON.parse(await readFile(new URL('../research/seo-comparison/reported-cases.json', import.meta.url), 'utf8'));
 const caseRecord = dataset.cases.find(c => c.id === 'R-atik-su');
+test('committed Gemini reference hashes match the actual frozen baseline prompt and input', async () => {
+  const observed = JSON.parse(await readFile(new URL('../research/seo-comparison/first-trial-observed.json', import.meta.url), 'utf8'));
+  assert.equal(observed.status, 'completed');
+  assert.equal(observed.caseId, caseRecord.id);
+  assert.equal(observed.promptSha256, sha(SEO_PROMPT));
+  assert.equal(observed.inputSha256, sha(caseRecord.input));
+  assert.equal(observed.renderedPromptSha256, sha(SEO_PROMPT.replace('{{input}}', () => caseRecord.input)));
+});
 const sha = s => createHash('sha256').update(s).digest('hex');
 const ref = c => ({ status: 'completed', caseId: c.id, promptSha256: sha(SEO_PROMPT), inputSha256: sha(c.input), renderedPromptSha256: sha(SEO_PROMPT.replace('{{input}}', () => c.input)) });
 const args = () => ({ approved: true, apiKey: 'fake-unit-test-key', caseRecord, reference: ref(caseRecord) });

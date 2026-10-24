@@ -1,3 +1,5 @@
+Current task T-014: one newly authorized hosted OpenAI baseline using the user-added repository secret. Same shared prompt and input, ~USD0.001 list-price preflight limit, no retries. Actual result pending; prior failed request remains evidence. See tasks/T-014.md.
+
 Current checkpoint: T-013 one approved OpenAI baseline attempted; transport failed with unknown provider outcome. Comparison blocked, no automatic retry. Full observations and review in research/seo-comparison/first-pair-review.md.
 
 Current checkpoint: T-012 first Gemini one-case generation completed in run 39969638630 (one request). Assistant quality review needs revision. Matched baseline and blinded human evaluation remain open. Result and review are in PR #13; no more generation requests in this task.

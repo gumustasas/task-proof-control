@@ -1,3 +1,7 @@
+# 2026-10-24 — New repository key; one hosted baseline authorized
+
+User confirmed a new OPENAI_API_KEY Actions secret. T-014 plan: actions-baseline-plan.md. Existing CLI unchanged, same reference hashes verified locally. Previous local failure retained. One GitHub push transition and run_attempt=1 only; no retries, dispatch or secret extraction. PR/CI/squash and actual result pending. PR #14 previously merged as 6772a0e8dfb9ca290655d73e2ece296f95c6a573 after 66 tests and 7 UI checks; old pending notes below are historical.
+
 # 2026-10-23 - Matched OpenAI baseline attempted; comparison blocked
 
 T-013: user approved existing local key reuse and one approximately USD 0.001 gpt-4o-mini request. Confirmed Growth OS Vercel OPENAI_CONTENT_MODEL setting. Shared prompt/input hashes matched the Gemini result; preflight list-price upper bound USD 0.00067725. One local POST attempt returned no HTTP response (request_failed_unknown_outcome, 70ms); provider receipt, response, usage and billing unknown. No retry, secret copying, fallback or Growth OS changes. DNS resolves; cause not established. 66/66 local tests passed; PR/CI/squash pending. See tasks/T-013.md and research/seo-comparison/first-pair-review.md. The first pair remains incomplete; no winner or savings claim. Do not run the CLI again automatically.
