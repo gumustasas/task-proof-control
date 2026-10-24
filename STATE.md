@@ -1,3 +1,9 @@
+# 2026-10-24 — First successful matched pair completed
+
+Gemini original run39969638630/job120468579502:1257ms,262input+234output=496tokens,93words. OpenAI after explicit credit addition run40095538718/job120876892741 at74c11014d161e8b48633832113a46a0e9dc827a9:HTTP200,completed,3593ms,266input+208output=474tokens,95words; estimated list cost0.0001647USD,billed cost unknown. Exactly one request in the successful task. Input/prompt/rendered hashes match. Earlier failures retained.
+
+First pair report research/seo-comparison/first-pair-review.md and full original log observations first-successful-pair.json. Non-blind assistant review: both clear Turkish, OpenAI better report attribution, Gemini more concrete target/table. Neither explicitly requires verification of technical ratios from authoritative sources; do not publish as-is. No general winner, integration, human savings claim or additional model calls. T-016 complete; T-010 larger pilot/human review remains open. PR#17 passed69tests/7UI/Docker and squash merged; old pending notes below are historical.
+
 # 2026-10-24 — T-016, explicit API credit-added confirmation
 
 User explicitly confirmed API credit addition after the precise credit_balance_exhausted error. T-015 trial40094645100/job120874237592 was HTTP429/insufficient_quota/credit_balance_exhausted, no text or usage. PR #16 squash f861e84a2c7c851b85cfb8b5b09146884de64d2c, exact-head CI40094561706/job120873993862 passed69 tests,7UI and Docker. Original result is in PR #16 body; older pending notes below are historical.

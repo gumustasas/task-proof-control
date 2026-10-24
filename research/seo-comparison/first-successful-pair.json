@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "scope": "one_case_exploratory_pair",
+  "caseId": "R-atik-su",
+  "samePromptAndInputHashes": true,
+  "review": {
+    "type": "unblinded_assistant",
+    "publishAsIs": false,
+    "modelWinner": null,
+    "humanTimeSavings": null
+  },
+  "observations": [
+    {
+      "schemaVersion": 1,
+      "requestId": "gemini-first-seo-20261023",
+      "status": "completed",
+      "provider": "google",
+      "model": "gemini-3.1-flash-lite",
+      "caseId": "R-atik-su",
+      "provenance": "reported",
+      "accountTier": "free_user_reported",
+      "billingVerified": false,
+      "requestsAttempted": 1,
+      "httpStatus": 200,
+      "response": "**Bulgu:** /su-aritma-cihazi-ariza-nedenleri-ve-cozumleri/ sayfasında su arıtma cihazlarının atık su oranına dair bilgi sadece \"modele bağlı\" ifadesiyle sınırlıdır; somut oranlar veya karşılaştırmalı veriler eksiktir.\n\n**Önerilen işlem:** Sayfaya, farklı model türlerini ve bunların ortalama atık su oranlarını içeren bilgilendirici bir tablo ekleyin.\n\n**Gerekçe:** Kullanıcılar \"ne kadar atık su atar\" sorusuna net yanıt arıyor. Detaylı veri sunmak, kullanıcı deneyimini iyileştirerek sayfanın otoritesini artırabilir.\n\n**Eksik bilgi:** Arama hacmi, GSC verileri, GA4 etkileşim metrikleri ve mevcut sayfa performansı hakkında veri bulunmamaktadır.\n\n**Başarı nasıl ölçülür:** Güncelleme sonrası ilgili anahtar kelimelerdeki sıralama değişimleri ve sayfa içi kullanıcı etkileşim süreleri izlenerek değerlendirilebilir.",
+      "wallMs": 1257,
+      "inputTokens": 262,
+      "outputTokens": 234,
+      "thinkingTokens": null,
+      "totalTokens": 496,
+      "apiCostUsd": null,
+      "canClaimModelComparison": false,
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "accuracy": null,
+        "turkish": null
+      },
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma cihazları ne kadar atık su atar. Bulgu: Rapora göre /su-aritma-cihazi-ariza-nedenleri-ve-cozumleri/ sayfasındaki ilgili bölüm yalnız modele bağlı olduğunu belirtiyor; oran ve karşılaştırma eksik olarak değerlendirilmiş. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "promptSha256": "88ff83bcc100f9ad728ebc118367e6e1ecf5298bf35efd516ec5718e35c52cce",
+      "inputSha256": "6eab680105fb7c83998a294e7c23259fe282e2a9eba302e92b883010e5578cb8",
+      "renderedPromptSha256": "cae62b797d5f3e38ede52f8efe4d36f8e21f9d179337e9a2d6116f9cbe5b92aa",
+      "requestSha256": "b134d50af09dd260b58864881fff9d3aec32c6280136b0aedf0dc58ce23add70",
+      "generationConfig": {
+        "candidateCount": 1,
+        "temperature": 0.2,
+        "maxOutputTokens": 768
+      },
+      "observedAt": "2026-10-23T14:26:34.774Z",
+      "finishReason": "STOP",
+      "wordCount": 93,
+      "withinWordLimit": true,
+      "modelVersion": "gemini-3.1-flash-lite",
+      "execution": {
+        "runner": "github_actions",
+        "runId": 39969638630,
+        "jobId": 120468579502,
+        "commitSha": "115b68df57c24f2a038661e83dd5eccd889ab983"
+      }
+    },
+    {
+      "schemaVersion": 1,
+      "provider": "openai",
+      "model": "gpt-4o-mini",
+      "caseId": "R-atik-su",
+      "provenance": "reported",
+      "status": "completed",
+      "requestsAttempted": 1,
+      "httpStatus": 200,
+      "response": "**Bulgu:** 23 Ekim 2026 Growth OS teslim raporuna göre, su arıtma cihazlarının atık su oranları yalnızca modele bağlı olarak belirtilmiş. Ancak, oranlar ve karşılaştırmalar eksik.\n\n**Önerilen işlem:** Su arıtma cihazlarıyla ilgili daha fazla veri toplayarak, her modelin atık su oranlarını ve performansını karşılaştıran bir içerik oluşturulması önerilir.\n\n**Gerekçe:** Kullanıcılar, farklı modellerin atık su verimliliğini anlamak istiyor. Detaylı karşılaştırmalar, kullanıcıların bilinçli seçim yapmalarına yardımcı olur.\n\n**Eksik bilgi:** Arama hacmi, GSC, GA4 verileri ve ölçülen etki gibi önemli veriler mevcut değil.\n\n**Başarı nasıl ölçülür:** Oluşturulan içeriğin kullanıcı etkileşimi, sayfa görüntüleme sayısı ve dönüşüm oranları ile izlenmesi gerekecek.",
+      "wallMs": 3593,
+      "inputTokens": 266,
+      "outputTokens": 208,
+      "totalTokens": 474,
+      "apiCostUsd": null,
+      "estimatedCostUsd": 0.0001647,
+      "review": {
+        "status": "pending"
+      },
+      "promptSha256": "88ff83bcc100f9ad728ebc118367e6e1ecf5298bf35efd516ec5718e35c52cce",
+      "inputSha256": "6eab680105fb7c83998a294e7c23259fe282e2a9eba302e92b883010e5578cb8",
+      "renderedPromptSha256": "cae62b797d5f3e38ede52f8efe4d36f8e21f9d179337e9a2d6116f9cbe5b92aa",
+      "input": "Kaynak: 23 Ekim 2026 Growth OS teslim raporu. Bu, rapordaki bulgunun aktarımıdır; sayfanın güncel durumu yeniden okunmadı. Konu: su arıtma cihazları ne kadar atık su atar. Bulgu: Rapora göre /su-aritma-cihazi-ariza-nedenleri-ve-cozumleri/ sayfasındaki ilgili bölüm yalnız modele bağlı olduğunu belirtiyor; oran ve karşılaştırma eksik olarak değerlendirilmiş. Talep kaynağı raporda Google önerisi olarak belirtiliyor. Bu girdi için arama hacmi, GSC, GA4 ve ölçülmüş etki yok. Bu eksik bilgilerle koşullu ve uygulanabilir SEO önerisi yaz.",
+      "source": {
+        "url": "https://github.com/gumustasas/buzsu-growth-os/blob/db0c79565acd0f9a350aac387a07b9c6f16708b4/drafts/reports/content-match/2026-10-23-teslimat-3-oneriler.md",
+        "commitSha": "db0c79565acd0f9a350aac387a07b9c6f16708b4",
+        "reportDate": "2026-10-23",
+        "section": "Örnek öneriler (gerçek)"
+      },
+      "requestSha256": "6ed9d8f226bfb23331e30f849cfd15996ed164f83402a21532f78b3153aa6c22",
+      "observedAt": "2026-10-24T12:49:44.227Z",
+      "listPriceUpperBoundUsd": 0.00067725,
+      "inputTokenUpperBound": 1443,
+      "pricing": {
+        "inputPerMillionUsd": 0.15,
+        "outputPerMillionUsd": 0.6,
+        "checkedAt": "2026-10-23",
+        "source": "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+        "billingVerified": false
+      },
+      "mode": "github_actions_api_single_sample",
+      "modelVersion": "gpt-4o-mini-2024-07-18",
+      "wordCount": 95,
+      "withinWordLimit": true,
+      "execution": {
+        "runner": "github_actions",
+        "runId": 40095538718,
+        "jobId": 120876892741,
+        "commitSha": "74c11014d161e8b48633832113a46a0e9dc827a9"
+      }
+    }
+  ]
+}
